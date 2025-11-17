@@ -1,7 +1,9 @@
-# 项目概述
-HuGraph 是一个基于 C++17 的高性能存算分离式存储查询系统，集成了 LevelDB、Apache Arrow 和阿里云 OSS SDK，提供高效的数据处理和查询能力。
+HuGraph - 高性能存算分离式存储查询系统
+项目概述
+HuGraph 是一个基于 C++17 的云原生RDF存储查询系统，集成了 LevelDB、Apache Arrow 和阿里云 OSS SDK，能够在满足时间约束的情况下最小化经济成本，同时提供可接受的查询性能。
 
 目录结构
+text
 S3C++/
 ├── CMakeLists.txt              # 项目构建配置文件
 ├── main.cpp                   # 主程序入口
@@ -16,13 +18,13 @@ S3C++/
 └── ArrowInputStream/          # Arrow 输入流处理模块
     └── ArrowInputStream.cpp
 实验环境
-操作系统: Linux iZn4a7auawqabklo8wd4xuZ 5.10.134-19.1.al8.x86_64 #1 SMP Wed Jun 25 10:21:27 CST 2025 x86_64 x86_64 x86_64 GNU/Linux
+操作系统: Linux iZn4a7auawqabklo8wd4xuZ 5.10.134-19.1.al8.x86_64
 
-编译器: gcc (GCC) 10.2.1 20200825 (Alibaba 10.2.1-3.8 2.32)
+编译器: GCC 10.2.1 20200825
 
-构建工具: cmake version 3.26.5
+构建工具: CMake 3.26.5
 
-cpu与内存: 2CPU 8 GB RAM
+硬件配置: 2CPU 8 GB RAM
 
 依赖安装
 1. 基础开发工具
@@ -47,7 +49,6 @@ sudo yum install -y \
     libcurl-devel \
     openssl-devel \
     zlib-devel
-    
 2. LevelDB 安装
 方法一：包管理器安装
 
@@ -68,12 +69,21 @@ make -j$(nproc)
 sudo make install
 3. Apache Arrow 安装
 需要使用到的模块有：
+
 arrow_shared
+
 ArrowAcero
+
 ArrowDataset
+
 ArrowCompute
-方法一：包管理器安装，参考网址：https://arrow.apache.org/install/
-方法二：源码编译安装：参考网址：https://arrow.apache.org/docs/developers/cpp/building.html#building-arrow-cpp
+
+方法一：包管理器安装
+参考官方安装指南：https://arrow.apache.org/install/
+
+方法二：源码编译安装
+参考官方构建文档：https://arrow.apache.org/docs/developers/cpp/building.html#building-arrow-cpp
+
 4. 阿里云 OSS SDK 安装
 bash
 git clone https://github.com/aliyun/aliyun-oss-cpp-sdk.git
@@ -87,12 +97,33 @@ cmake \
 
 make -j$(nproc)
 sudo make install
-
-# 构建指南
+构建指南
+bash
+# 克隆项目
 git clone https://github.com/lstiver/HuGraph.git
-进入目录文件
-mkdir build & cd build
+cd HuGraph
+
+# 构建项目
+mkdir build && cd build
 cmake ..
 make
-运行可执行文件
+
+# 运行程序
 ./S3C++
+功能特性
+🚀 高性能: 基于 C++17 和现代编译优化
+
+💾 存算分离: 集成阿里云 OSS 实现存储与计算分离
+
+📊 多格式支持: 通过 Apache Arrow 支持多种数据格式
+
+🔍 高效查询: 优化的查询算法和数据处理管道
+
+贡献
+欢迎提交 Issue 和 Pull Request 来改进项目。
+
+联系我们
+如有问题，请通过以下方式联系：
+
+GitHub Issues: [项目 Issues 页面]
+邮箱: hnu16pp@hnu.edu.cn

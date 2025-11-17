@@ -90,7 +90,7 @@ cmake --install . --config=Debug
 ```
 
 ### Build Project
-1.克隆项目
+1. 克隆项目
 ```bash
 git clone https://github.com/lstiver/HuGraph.git
 cd HuGraph

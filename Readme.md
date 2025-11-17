@@ -96,12 +96,13 @@ git clone https://github.com/lstiver/HuGraph.git
 cd HuGraph
 ```
 2. 配置环境变量
-Amazon 
+
+#### Amazon 
 ```bash
 aws configure
 ```
 
-aliyun
+#### aliyun
 
 edpoint默认为华中-武汉，可自行在main函数中修改
 ```bash

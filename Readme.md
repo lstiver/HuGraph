@@ -35,6 +35,7 @@ sudo yum install -y \
     zlib-devel
 ```
 2. LevelDB 安装
+
 方法一：包管理器安装
 ```bash
 sudo yum install -y leveldb-devel
@@ -52,6 +53,7 @@ sudo make install
 ```
 
 3. Apache Arrow 安装
+
 需要使用到的模块有：arrow_shared,ArrowAcero,ArrowDataset,ArrowCompute
 
 方法一：包管理器安装
@@ -75,8 +77,17 @@ make -j$(nproc)
 sudo make install
 ```
 
-5. Amazon S3 SDK安装（如果使用阿里云部署，无需安装）
+5. Amazon AWS SDK安装（如果使用阿里云部署，无需安装）
 
+```bash
+sudo yum install libcurl-devel openssl-devel libuuid-devel pulseaudio-libs-devel
+git clone --recurse-submodules https://github.com/aws/aws-sdk-cpp
+mkdir sdk_build
+cd sdk_build
+cmake ../aws-sdk-cpp -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/usr/local/ -DCMAKE_INSTALL_PREFIX=/usr/local/ -DBUILD_ONLY="s3"
+cmake --build . --config=Debug
+cmake --install . --config=Debug
+```
 
 ### Build Project
 1.克隆项目

@@ -75,20 +75,38 @@ make -j$(nproc)
 sudo make install
 ```
 
-4.克隆项目
+5. Amazon S3 SDK安装（如果使用阿里云部署，无需安装）
+
+
+### Build Project
+1.克隆项目
 ```bash
 git clone https://github.com/lstiver/HuGraph.git
 cd HuGraph
 ```
+2. 配置环境变量
+Amazon 
+```bash
+aws configure
+```
 
-5.构建项目
+aliyun
+
+edpoint默认为华中-武汉，可自行在main函数中修改
+```bash
+echo 'export ALIBABA_CLOUD_ACCESS_KEY_ID="LTAI5tYourAccessKeyId"' >> ~/.bashrc
+echo 'export ALIBABA_CLOUD_ACCESS_KEY_SECRET="K4HcYourAccessKeySecret"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+2. 编译项目
 ```bash
 mkdir build && cd build
 cmake ..
 make
 ```
 
-6. 运行程序
+3. 运行程序
 ```bash
 ./S3C++
 ```

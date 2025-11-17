@@ -1,4 +1,4 @@
-# HuGraph - 高性能存算分离式存储查询系统
+# HuGraph：An Economical Cloud-Native RDF Store
 ## Overview
 HuGraph 是一个基于 C++17 的云原生RDF存储查询系统，集成了 LevelDB、Apache Arrow 和阿里云 OSS SDK，能够在满足时间约束的情况下最小化经济成本，同时提供可接受的查询性能。目前有两个版本，分别基于amazon和aliyun，amazon在main分支下，aliyun在分支aliyun下。
 
@@ -24,19 +24,6 @@ HuGraph 是一个基于 C++17 的云原生RDF存储查询系统，集成了 Leve
 ## Quickstart
 ### Install dependencies
 1. 基础开发工具
-Ubuntu/Debian:
-
-```bash
-sudo apt-get update
-sudo apt-get install -y \
-    build-essential \
-    cmake \
-    pkg-config \
-    libcurl4-openssl-dev \
-    libssl-dev \
-    zlib1g-dev
-```
-CentOS/RHEL:
 
 ```bash
 sudo yum groupinstall -y "Development Tools"

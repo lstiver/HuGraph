@@ -1,0 +1,5 @@
+SELECT ?venue ?coords 
+WHERE {
+    ?venue <http://www.wikidata.org/prop/direct/P1217> ?coords .
+    <http://www.wikidata.org/entity/Q235065> <http://www.wikidata.org/prop/direct/P625> ?broadWayLoc .
+}

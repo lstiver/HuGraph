@@ -1,0 +1,4 @@
+select ?city ?name 
+where { 
+?city <http://dbpedia.org/ontology/leaderName> ?name .
+}

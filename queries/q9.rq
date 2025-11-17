@@ -1,0 +1,10 @@
+select ?city ?l ?airport ?iata ?airport_name 
+where { 
+?city <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place> .
+?city <http://www.w3.org/2000/01/rdf-schema#label> ?l .
+?airport <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Airport> .
+?airport <http://dbpedia.org/property/cityServed> ?city .
+?airport <http://dbpedia.org/property/iata> ?iata .
+?airport <http://dbpedia.org/property/nativename> ?airport_name .
+}
+

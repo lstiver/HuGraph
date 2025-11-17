@@ -1,0 +1,5 @@
+select ?p ?s ?ispartof 
+where { 
+    ?p <http://dbpedia.org/property/nationality> ?s .
+    ?p <http://dbpedia.org/property/occupation> ?ispartof .
+}

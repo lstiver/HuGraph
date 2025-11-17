@@ -1,0 +1,8 @@
+select ?s ?x ?y ?z ?m 
+where { 
+?s <http://dbpedia.org/property/influences> ?x .
+?x <http://dbpedia.org/property/influences> ?y .
+?y <http://dbpedia.org/property/influences> ?z .
+?z <http://dbpedia.org/property/institution> ?m .
+?m <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+}

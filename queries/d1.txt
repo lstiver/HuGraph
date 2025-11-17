@@ -1,0 +1,5 @@
+select ?mp ?party ?uni
+where { 
+?mp <http://dbpedia.org/property/party> ?party .
+?mp <http://dbpedia.org/property/almaMater> ?uni .
+}

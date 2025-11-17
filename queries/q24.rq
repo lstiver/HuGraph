@@ -1,0 +1,7 @@
+select ?state ?lat ?long ?next ?comment
+where { 
+?state <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?lat .
+?state <http://www.w3.org/2002/07/owl#sameAs> ?long .
+?state <http://www.w3.org/2000/01/rdf-schema#comment> ?comment .
+?next <http://dbpedia.org/property/next> ?state .
+}

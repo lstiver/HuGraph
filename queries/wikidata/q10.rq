@@ -1,0 +1,9 @@
+SELECT ?elementLabel ?_boiling_point ?_melting_point ?_electronegativity ?_density ?_mass
+WHERE{
+  ?element <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q11344> .
+  ?element <http://www.wikidata.org/prop/direct/P2102> ?_boiling_point .
+  ?element <http://www.wikidata.org/prop/direct/P2102> ?_melting_point .
+  ?element <http://www.wikidata.org/prop/direct/P1108> ?_electronegativity .
+  ?element <http://www.wikidata.org/prop/direct/P2054> ?_density .
+  ?element <http://www.wikidata.org/prop/direct/P2067> ?_mass .
+}

@@ -1,0 +1,4 @@
+SELECT ?song ?code
+WHERE{
+  ?song <http://www.wikidata.org/prop/direct/P1236> ?code.
+}

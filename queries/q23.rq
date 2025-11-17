@@ -1,0 +1,6 @@
+select ?p ?fathers ?homepage 
+where {
+    ?p <http://dbpedia.org/property/father> ?fathers .
+    ?p <http://xmlns.com/foaf/0.1/homepage> ?homepage .
+}
+

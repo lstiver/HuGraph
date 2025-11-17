@@ -1,0 +1,4 @@
+select ?subject ?industries 
+where { 
+?subject <http://dbpedia.org/property/industry> ?industries .
+}

@@ -1,0 +1,4 @@
+SELECT ?item  ?value 
+WHERE{
+  ?item <http://www.wikidata.org/prop/direct/P1800> ?value .
+}

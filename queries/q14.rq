@@ -1,0 +1,7 @@
+select ?s ?x ?y ?z ?m 
+where { 
+?s <http://dbpedia.org/property/influences> ?x .
+?x <http://dbpedia.org/property/influences> ?y .
+?y <http://dbpedia.org/property/influences> ?z .
+?z <http://dbpedia.org/property/region> ?m .
+}

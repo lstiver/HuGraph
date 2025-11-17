@@ -1,0 +1,5 @@
+SELECT ?pathway ?wpid 
+WHERE {
+   ?pathway <http://www.wikidata.org/prop/direct/P2410> ?wpid .
+   ?pathway <http://www.wikidata.org/prop/direct/P703> <http://www.wikidata.org/entity/Q15978631> .
+}

@@ -1,0 +1,4 @@
+SELECT ?compound ?cas
+WHERE{
+  ?compound <http://www.wikidata.org/prop/direct/P231> ?cas .
+}

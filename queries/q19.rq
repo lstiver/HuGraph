@@ -1,0 +1,5 @@
+select ?ispartof ?location ?m 
+where { 
+    ?ispartof <http://dbpedia.org/property/location> ?location .
+    ?location <http://dbpedia.org/property/timezone> ?m .
+}

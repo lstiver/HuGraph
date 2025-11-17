@@ -1,0 +1,7 @@
+select ?state ?lat ?long ?comment ?next 
+where { 
+?state <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ?lat .
+?state <http://www.w3.org/2003/01/geo/wgs84_pos#long> ?long .
+?state <http://www.w3.org/2000/01/rdf-schema#comment> ?comment .
+?next <http://dbpedia.org/property/next> ?state .
+}

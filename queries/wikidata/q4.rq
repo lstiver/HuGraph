@@ -1,0 +1,5 @@
+SELECT ?human
+WHERE{
+  ?human <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5> .
+  ?human <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/prop/novalue/P40> . 
+}

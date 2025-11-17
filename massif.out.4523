@@ -1,0 +1,1497 @@
+desc: --depth=5
+cmd: ./S3C++
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=191754582
+mem_heap_B=5918063
+mem_heap_extra_B=729649
+mem_stacks_B=0
+heap_tree=detailed
+n4: 5918063 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 5524884 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 2100120 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 829640 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 574104 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 500552 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 73552 in 13 places, all below massif's threshold (1.00%)
+    n2: 184696 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 108464 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 76232 0x495EAF7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 70840 in 6 places, all below massif's threshold (1.00%)
+   n3: 742904 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 422680 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 332784 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 89896 0x4990899: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 185088 0x49D5370: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 105240 in 4 places, all below massif's threshold (1.00%)
+     n0: 79848 0x49D5319: PyDescr_NewWrapper (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 135136 in 32 places, all below massif's threshold (1.00%)
+   n1: 269824 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 269824 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 267784 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2040 in 1 place, below massif's threshold (1.00%)
+   n1: 188128 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 188128 in 19 places, all below massif's threshold (1.00%)
+   n0: 69624 in 9 places, all below massif's threshold (1.00%)
+  n3: 1349098 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1028504 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 1028504 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 387333 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 253025 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 252985 in 8 places, all below massif's threshold (1.00%)
+     n0: 135161 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 240612 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 240612 in 76 places, all below massif's threshold (1.00%)
+   n0: 79982 in 18 places, all below massif's threshold (1.00%)
+  n2: 492112 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 473792 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 473088 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 332112 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 140976 in 8 places, all below massif's threshold (1.00%)
+    n0: 704 in 1 place, below massif's threshold (1.00%)
+   n0: 18320 in 12 places, all below massif's threshold (1.00%)
+  n2: 461408 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 452160 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 294936 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 294936 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 157224 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 157224 in 10 places, all below massif's threshold (1.00%)
+   n0: 9248 in 1 place, below massif's threshold (1.00%)
+  n2: 429447 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 428696 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 422241 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 293194 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 127473 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1574 in 7 places, all below massif's threshold (1.00%)
+    n0: 6455 in 16 places, all below massif's threshold (1.00%)
+   n0: 751 in 2 places, all below massif's threshold (1.00%)
+  n3: 394872 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 300056 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 296472 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 227416 in 37 places, all below massif's threshold (1.00%)
+     n0: 69056 0x4962764: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 3584 in 2 places, all below massif's threshold (1.00%)
+   n1: 68376 0x4951551: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 68376 in 23 places, all below massif's threshold (1.00%)
+   n0: 26440 in 3 places, all below massif's threshold (1.00%)
+  n2: 185400 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 110792 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 86008 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 82552 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 3456 in 1 place, below massif's threshold (1.00%)
+    n0: 24784 in 1 place, below massif's threshold (1.00%)
+   n0: 74608 in 4 places, all below massif's threshold (1.00%)
+  n0: 112427 in 22 places, all below massif's threshold (1.00%)
+ n0: 211531 in 195 places, all below massif's threshold (1.00%)
+ n2: 108944 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n1: 66816 0x4982999: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 66816 in 11 places, all below massif's threshold (1.00%)
+  n0: 42128 in 73 places, all below massif's threshold (1.00%)
+ n1: 72704 0x4C5B949: ??? (in /usr/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400A1AD: call_init (dl-init.c:70)
+   n1: 72704 0x400A1AD: call_init (dl-init.c:26)
+    n1: 72704 0x400A29B: _dl_init (dl-init.c:117)
+     n0: 72704 0x4020C29: ??? (in /usr/lib64/ld-linux-x86-64.so.2)
+#-----------
+snapshot=2
+#-----------
+time=598488400
+mem_heap_B=14562543
+mem_heap_extra_B=2020073
+mem_stacks_B=0
+heap_tree=detailed
+n4: 14562543 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 12413449 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 4597072 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 1747584 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1348896 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1081632 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 267264 in 15 places, all below massif's threshold (1.00%)
+    n1: 234952 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 234952 in 2 places, all below massif's threshold (1.00%)
+    n0: 163736 in 8 places, all below massif's threshold (1.00%)
+   n3: 1583936 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1045616 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 910632 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 134984 in 1 place, below massif's threshold (1.00%)
+    n0: 280856 in 65 places, all below massif's threshold (1.00%)
+    n1: 257464 0x49D5370: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 257464 in 5 places, all below massif's threshold (1.00%)
+   n1: 760920 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 760920 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 759696 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1224 in 1 place, below massif's threshold (1.00%)
+   n1: 404672 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 404672 in 23 places, all below massif's threshold (1.00%)
+   n0: 99960 in 9 places, all below massif's threshold (1.00%)
+  n3: 3086272 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2491429 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 2491429 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 829866 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 776415 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 566592 in 8 places, all below massif's threshold (1.00%)
+     n0: 318556 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+   n1: 432132 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 432132 in 126 places, all below massif's threshold (1.00%)
+   n0: 162711 in 20 places, all below massif's threshold (1.00%)
+  n2: 1130192 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1005608 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 415752 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 415752 in 14 places, all below massif's threshold (1.00%)
+   n0: 124584 in 1 place, below massif's threshold (1.00%)
+  n2: 1086720 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1055472 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1050544 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 753632 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 296912 in 8 places, all below massif's threshold (1.00%)
+    n0: 4928 in 1 place, below massif's threshold (1.00%)
+   n0: 31248 in 13 places, all below massif's threshold (1.00%)
+  n2: 940497 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 939646 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 930513 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 642415 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 281142 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 6956 in 8 places, all below massif's threshold (1.00%)
+    n0: 9133 in 20 places, all below massif's threshold (1.00%)
+   n0: 851 in 2 places, all below massif's threshold (1.00%)
+  n2: 816248 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 602760 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 596552 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 411248 in 45 places, all below massif's threshold (1.00%)
+     n0: 185304 0x4962764: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 6208 in 2 places, all below massif's threshold (1.00%)
+   n0: 213488 in 4 places, all below massif's threshold (1.00%)
+  n2: 456384 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 310496 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 274896 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 270600 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 35600 in 1 place, below massif's threshold (1.00%)
+   n0: 145888 in 5 places, all below massif's threshold (1.00%)
+  n0: 300064 in 27 places, all below massif's threshold (1.00%)
+ n5: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 591632 in 30 places, all below massif's threshold (1.00%)
+  n1: 223040 0x16690188: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+   n0: 223040 in 3 places, all below massif's threshold (1.00%)
+  n1: 206078 0x16693D8E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+   n1: 206078 0x16694024: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+    n1: 206078 0x1669397E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+     n0: 206078 0x166EE766: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n1: 189576 0x16692C0E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+   n2: 189576 0x16693B2E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+    n1: 189576 0x16694024: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+     n0: 189576 0x1669397E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+    n0: 0 in 1 place, below massif's threshold (1.00%)
+  n2: 186912 0x1669806E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+   n1: 186912 0x16692B59: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+    n1: 186912 0x16693B2E: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+     n0: 186912 0x16694024: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+   n0: 0 in 1 place, below massif's threshold (1.00%)
+ n0: 537111 in 220 places, all below massif's threshold (1.00%)
+ n1: 214745 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n0: 214745 in 89 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=1084401281
+mem_heap_B=29425144
+mem_heap_extra_B=4034872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1379214221
+mem_heap_B=30566087
+mem_heap_extra_B=4201697
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1817776800
+mem_heap_B=30594163
+mem_heap_extra_B=4213173
+mem_stacks_B=0
+heap_tree=detailed
+n5: 30594163 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 24872958 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 9690312 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4517824 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2299280 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2272208 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 27072 in 2 places, all below massif's threshold (1.00%)
+    n2: 1505336 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1355376 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 713208 in 78 places, all below massif's threshold (1.00%)
+   n3: 2876032 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1902064 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1551320 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 350744 in 17 places, all below massif's threshold (1.00%)
+    n2: 692648 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 392272 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 300376 in 1 place, below massif's threshold (1.00%)
+    n0: 281320 in 8 places, all below massif's threshold (1.00%)
+   n1: 1173680 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1173680 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1173408 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 980808 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 980808 in 30 places, all below massif's threshold (1.00%)
+   n0: 141968 in 10 places, all below massif's threshold (1.00%)
+  n5: 5479328 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3435821 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3435821 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166699 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 987542 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 835005 in 8 places, all below massif's threshold (1.00%)
+     n0: 446575 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 707582 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 3376 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 512695 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 512695 in 149 places, all below massif's threshold (1.00%)
+   n0: 231904 in 24 places, all below massif's threshold (1.00%)
+  n3: 4499032 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909088 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903376 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903208 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 5712 in 2 places, all below massif's threshold (1.00%)
+   n2: 1223064 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1186184 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1186184 in 53 places, all below massif's threshold (1.00%)
+    n0: 36880 in 3 places, all below massif's threshold (1.00%)
+   n0: 366880 in 3 places, all below massif's threshold (1.00%)
+  n2: 1563888 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1523104 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1507088 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1038576 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 468512 in 8 places, all below massif's threshold (1.00%)
+    n0: 16016 in 1 place, below massif's threshold (1.00%)
+   n0: 40784 in 17 places, all below massif's threshold (1.00%)
+  n2: 1313907 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1312138 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1298854 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 887723 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 400570 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 13284 in 37 places, all below massif's threshold (1.00%)
+   n0: 1769 in 2 places, all below massif's threshold (1.00%)
+  n2: 1255064 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1112024 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 522168 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 522168 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 652800 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 466904 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 427184 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 422888 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 185896 in 5 places, all below massif's threshold (1.00%)
+  n0: 418627 in 43 places, all below massif's threshold (1.00%)
+ n3: 2400546 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1101024 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 10144 in 4 places, all below massif's threshold (1.00%)
+  n1: 977216 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 977216 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 6720 in 4 places, all below massif's threshold (1.00%)
+  n0: 322306 in 96 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n0: 1388881 in 296 places, all below massif's threshold (1.00%)
+ n2: 534540 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 495703 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 55473 in 7 places, all below massif's threshold (1.00%)
+  n0: 38837 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=2106765164
+mem_heap_B=31129904
+mem_heap_extra_B=4329432
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2538478558
+mem_heap_B=31214827
+mem_heap_extra_B=4353013
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2976089105
+mem_heap_B=31994937
+mem_heap_extra_B=4444623
+mem_stacks_B=0
+heap_tree=detailed
+n6: 31994937 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25433059 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 9991824 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4603824 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2323280 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2276048 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 47232 in 2 places, all below massif's threshold (1.00%)
+    n2: 1508144 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1358184 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 772400 in 78 places, all below massif's threshold (1.00%)
+   n3: 2935912 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1923776 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 370800 in 17 places, all below massif's threshold (1.00%)
+    n2: 698680 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 396576 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 302104 in 1 place, below massif's threshold (1.00%)
+    n0: 313456 in 10 places, all below massif's threshold (1.00%)
+   n1: 1215160 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1215160 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1214888 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1071488 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1071488 in 33 places, all below massif's threshold (1.00%)
+   n0: 165440 in 10 places, all below massif's threshold (1.00%)
+  n5: 5488408 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 708859 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 4653 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 513119 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 513119 in 151 places, all below massif's threshold (1.00%)
+   n0: 236703 in 24 places, all below massif's threshold (1.00%)
+  n3: 4671736 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2910600 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903544 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903376 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 7056 in 2 places, all below massif's threshold (1.00%)
+   n2: 1374432 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1289816 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1289816 in 53 places, all below massif's threshold (1.00%)
+    n0: 84616 in 3 places, all below massif's threshold (1.00%)
+   n0: 386704 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566080 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41216 in 20 places, all below massif's threshold (1.00%)
+  n2: 1341354 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1338449 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 36989 in 41 places, all below massif's threshold (1.00%)
+   n0: 2905 in 2 places, all below massif's threshold (1.00%)
+  n2: 1282856 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1139816 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 549960 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 549960 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 671568 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 480800 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 441080 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 436784 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 190768 in 5 places, all below massif's threshold (1.00%)
+  n0: 419233 in 43 places, all below massif's threshold (1.00%)
+ n3: 2490674 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1123808 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 32928 in 4 places, all below massif's threshold (1.00%)
+  n1: 990016 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 990016 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 19520 in 4 places, all below massif's threshold (1.00%)
+  n0: 376850 in 104 places, all below massif's threshold (1.00%)
+ n0: 1565589 in 302 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n2: 561965 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 522241 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 82011 in 7 places, all below massif's threshold (1.00%)
+  n0: 39724 in 2 places, all below massif's threshold (1.00%)
+ n1: 546412 0x1588B29D: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.3.0.8)
+  n0: 546412 in 146 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=3389400129
+mem_heap_B=31657619
+mem_heap_extra_B=4376117
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3698057865
+mem_heap_B=31802893
+mem_heap_extra_B=4407587
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3936754600
+mem_heap_B=31852338
+mem_heap_extra_B=4415454
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4223196729
+mem_heap_B=32007252
+mem_heap_extra_B=4444924
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4557372061
+mem_heap_B=32098005
+mem_heap_extra_B=4456179
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=4891568869
+mem_heap_B=32053939
+mem_heap_extra_B=4452077
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=5130265426
+mem_heap_B=32090442
+mem_heap_extra_B=4455686
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=5416700832
+mem_heap_B=32054318
+mem_heap_extra_B=4452162
+mem_stacks_B=0
+heap_tree=detailed
+n6: 32054318 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25481485 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 10023136 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4607184 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2324880 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2273744 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 51136 in 2 places, all below massif's threshold (1.00%)
+    n2: 1508144 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1358184 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 774160 in 78 places, all below massif's threshold (1.00%)
+   n3: 2956040 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1927856 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 374880 in 17 places, all below massif's threshold (1.00%)
+    n2: 708608 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 398696 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 309912 in 1 place, below massif's threshold (1.00%)
+    n0: 319576 in 10 places, all below massif's threshold (1.00%)
+   n1: 1215160 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1215160 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1214888 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1079328 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1079328 in 33 places, all below massif's threshold (1.00%)
+   n0: 165424 in 10 places, all below massif's threshold (1.00%)
+  n5: 5489591 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 709248 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 5042 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 513577 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 513577 in 151 places, all below massif's threshold (1.00%)
+   n0: 237039 in 24 places, all below massif's threshold (1.00%)
+  n3: 4708056 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909592 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903544 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903376 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 6048 in 2 places, all below massif's threshold (1.00%)
+   n2: 1400336 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1292320 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1292320 in 53 places, all below massif's threshold (1.00%)
+    n0: 108016 in 3 places, all below massif's threshold (1.00%)
+   n0: 398128 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566248 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41384 in 20 places, all below massif's threshold (1.00%)
+  n2: 1320629 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1318792 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 17332 in 41 places, all below massif's threshold (1.00%)
+   n0: 1837 in 2 places, all below massif's threshold (1.00%)
+  n2: 1282856 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1139816 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 549960 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 549960 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 671736 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 480800 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 441080 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 436784 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 190936 in 5 places, all below massif's threshold (1.00%)
+  n0: 419233 in 43 places, all below massif's threshold (1.00%)
+ n3: 2500610 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1132000 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 41120 in 4 places, all below massif's threshold (1.00%)
+  n1: 991808 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 991808 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 21312 in 4 places, all below massif's threshold (1.00%)
+  n0: 376802 in 104 places, all below massif's threshold (1.00%)
+ n0: 1566041 in 305 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n2: 562532 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 522241 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 82011 in 7 places, all below massif's threshold (1.00%)
+  n0: 40291 in 2 places, all below massif's threshold (1.00%)
+ n1: 546412 0x1588B29D: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.3.0.8)
+  n0: 546412 in 146 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=5750875370
+mem_heap_B=32097511
+mem_heap_extra_B=4456513
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=5941830599
+mem_heap_B=32072078
+mem_heap_extra_B=4455298
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6253670792
+mem_heap_B=32070088
+mem_heap_extra_B=4454872
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=6643473689
+mem_heap_B=32091629
+mem_heap_extra_B=4455795
+mem_stacks_B=0
+heap_tree=detailed
+n6: 32091629 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25498792 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 10023136 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4607184 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2324880 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2273744 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 51136 in 2 places, all below massif's threshold (1.00%)
+    n2: 1508144 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1358184 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 774160 in 78 places, all below massif's threshold (1.00%)
+   n3: 2956040 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1927856 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 374880 in 17 places, all below massif's threshold (1.00%)
+    n2: 708608 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 398696 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 309912 in 1 place, below massif's threshold (1.00%)
+    n0: 319576 in 10 places, all below massif's threshold (1.00%)
+   n1: 1215160 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1215160 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1214888 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1079328 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1079328 in 33 places, all below massif's threshold (1.00%)
+   n0: 165424 in 10 places, all below massif's threshold (1.00%)
+  n5: 5489591 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 709248 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 5042 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 513577 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 513577 in 151 places, all below massif's threshold (1.00%)
+   n0: 237039 in 24 places, all below massif's threshold (1.00%)
+  n3: 4708056 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909592 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903544 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903376 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 6048 in 2 places, all below massif's threshold (1.00%)
+   n2: 1400336 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1292320 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1292320 in 53 places, all below massif's threshold (1.00%)
+    n0: 108016 in 3 places, all below massif's threshold (1.00%)
+   n0: 398128 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566248 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41384 in 20 places, all below massif's threshold (1.00%)
+  n2: 1337936 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1336099 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 34639 in 41 places, all below massif's threshold (1.00%)
+   n0: 1837 in 2 places, all below massif's threshold (1.00%)
+  n2: 1282856 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1139816 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 549960 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 549960 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 671736 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 480800 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 441080 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 436784 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 190936 in 5 places, all below massif's threshold (1.00%)
+  n0: 419233 in 43 places, all below massif's threshold (1.00%)
+ n3: 2500618 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1132000 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 41120 in 4 places, all below massif's threshold (1.00%)
+  n1: 991808 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 991808 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 21312 in 4 places, all below massif's threshold (1.00%)
+  n0: 376810 in 104 places, all below massif's threshold (1.00%)
+ n0: 1586037 in 305 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n2: 562532 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 522241 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 82011 in 7 places, all below massif's threshold (1.00%)
+  n0: 40291 in 2 places, all below massif's threshold (1.00%)
+ n1: 546412 0x1588B29D: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.3.0.8)
+  n0: 546412 in 146 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=6877383076
+mem_heap_B=32068497
+mem_heap_extra_B=4454623
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=7267188284
+mem_heap_B=32089969
+mem_heap_extra_B=4455423
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=7734976785
+mem_heap_B=32073723
+mem_heap_extra_B=4452709
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=7968860297
+mem_heap_B=32078654
+mem_heap_extra_B=4456250
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=8280702933
+mem_heap_B=32092265
+mem_heap_extra_B=4455999
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=8748484647
+mem_heap_B=32076368
+mem_heap_extra_B=4453088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=9060325974
+mem_heap_B=32074555
+mem_heap_extra_B=4452981
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=9372166788
+mem_heap_B=32072489
+mem_heap_extra_B=4452727
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=9839925308
+mem_heap_B=32085628
+mem_heap_extra_B=4454828
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=10269579437
+mem_heap_B=32075536
+mem_heap_extra_B=4454248
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=10699234932
+mem_heap_B=31772932
+mem_heap_extra_B=4394332
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=11128889901
+mem_heap_B=31767268
+mem_heap_extra_B=4393892
+mem_stacks_B=0
+heap_tree=detailed
+n6: 31767268 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25239421 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 9897832 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4567432 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2317136 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2273488 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 43648 in 2 places, all below massif's threshold (1.00%)
+    n2: 1506272 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1356312 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 744024 in 78 places, all below massif's threshold (1.00%)
+   n3: 2957616 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1929888 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 376912 in 17 places, all below massif's threshold (1.00%)
+    n2: 704528 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 397784 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 306744 in 1 place, below massif's threshold (1.00%)
+    n0: 323200 in 10 places, all below massif's threshold (1.00%)
+   n1: 1188232 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1188232 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1187960 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1035096 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1035096 in 33 places, all below massif's threshold (1.00%)
+   n0: 149456 in 10 places, all below massif's threshold (1.00%)
+  n5: 5489782 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 709384 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 5178 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 513622 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 513622 in 151 places, all below massif's threshold (1.00%)
+   n0: 237049 in 24 places, all below massif's threshold (1.00%)
+  n3: 4609840 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909424 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903376 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903208 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 6048 in 2 places, all below massif's threshold (1.00%)
+   n2: 1311864 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1228016 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1228016 in 53 places, all below massif's threshold (1.00%)
+    n0: 83848 in 3 places, all below massif's threshold (1.00%)
+   n0: 388552 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566304 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41440 in 20 places, all below massif's threshold (1.00%)
+  n2: 1325087 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1323250 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 21790 in 41 places, all below massif's threshold (1.00%)
+   n0: 1837 in 2 places, all below massif's threshold (1.00%)
+  n2: 1268960 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1125920 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 536064 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 536064 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 662640 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 471536 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 431816 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 427520 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 191104 in 5 places, all below massif's threshold (1.00%)
+  n0: 418976 in 43 places, all below massif's threshold (1.00%)
+ n3: 2467354 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1122272 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 31392 in 4 places, all below massif's threshold (1.00%)
+  n1: 987264 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 987264 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 16768 in 4 places, all below massif's threshold (1.00%)
+  n0: 357818 in 104 places, all below massif's threshold (1.00%)
+ n0: 1571958 in 305 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n1: 546412 0x1588B29D: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.3.0.8)
+  n0: 546412 in 146 places, all below massif's threshold (1.00%)
+ n2: 544885 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 504405 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 64175 in 7 places, all below massif's threshold (1.00%)
+  n0: 40480 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=33
+#-----------
+time=11558542702
+mem_heap_B=31804816
+mem_heap_extra_B=4397184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=11844978316
+mem_heap_B=31791703
+mem_heap_extra_B=4395625
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=12274632286
+mem_heap_B=31766778
+mem_heap_extra_B=4393558
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=12704287004
+mem_heap_B=32008869
+mem_heap_extra_B=4430115
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=12990722223
+mem_heap_B=31991693
+mem_heap_extra_B=4429939
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=13277157493
+mem_heap_B=32003705
+mem_heap_extra_B=4429719
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=13563593361
+mem_heap_B=31988872
+mem_heap_extra_B=4427416
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=13850029269
+mem_heap_B=31986883
+mem_heap_extra_B=4429845
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=14279691021
+mem_heap_B=31979398
+mem_heap_extra_B=4428546
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=14566126321
+mem_heap_B=32009621
+mem_heap_extra_B=4430731
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=14852562574
+mem_heap_B=31994824
+mem_heap_extra_B=4428560
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=15138998080
+mem_heap_B=31992672
+mem_heap_extra_B=4430720
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=15568651716
+mem_heap_B=32000472
+mem_heap_extra_B=4429280
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=15855088004
+mem_heap_B=31985298
+mem_heap_extra_B=4426878
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=16284741259
+mem_heap_B=31990564
+mem_heap_extra_B=4430476
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=16571178891
+mem_heap_B=31976024
+mem_heap_extra_B=4428072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=17000832848
+mem_heap_B=31985242
+mem_heap_extra_B=4426750
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=17191788342
+mem_heap_B=32005338
+mem_heap_extra_B=4430486
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=17382745063
+mem_heap_B=31977290
+mem_heap_extra_B=4428238
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=17573700414
+mem_heap_B=31967653
+mem_heap_extra_B=4426547
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=17764655929
+mem_heap_B=31985888
+mem_heap_extra_B=4429600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=17955611357
+mem_heap_B=31994846
+mem_heap_extra_B=4428754
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=18146568206
+mem_heap_B=31982097
+mem_heap_extra_B=4426167
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=18337524158
+mem_heap_B=31985500
+mem_heap_extra_B=4429556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=18528482217
+mem_heap_B=31971708
+mem_heap_extra_B=4428204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=18719438559
+mem_heap_B=31513518
+mem_heap_extra_B=4315330
+mem_stacks_B=0
+heap_tree=detailed
+n5: 31513518 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25556639 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 10059080 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4623984 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2332368 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2273872 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 58496 in 2 places, all below massif's threshold (1.00%)
+    n2: 1508144 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1358184 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 783472 in 78 places, all below massif's threshold (1.00%)
+   n3: 2957824 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1930480 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 377504 in 17 places, all below massif's threshold (1.00%)
+    n2: 704048 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 397784 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 306264 in 1 place, below massif's threshold (1.00%)
+    n0: 323296 in 10 places, all below massif's threshold (1.00%)
+   n1: 1215160 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1215160 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1214888 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1096272 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1096272 in 33 places, all below massif's threshold (1.00%)
+   n0: 165840 in 10 places, all below massif's threshold (1.00%)
+  n5: 5489241 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 708943 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 4737 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 514381 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 514381 in 151 places, all below massif's threshold (1.00%)
+   n0: 236190 in 24 places, all below massif's threshold (1.00%)
+  n3: 4745224 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909592 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903544 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903376 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 6048 in 2 places, all below massif's threshold (1.00%)
+   n2: 1425912 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1296584 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1296584 in 53 places, all below massif's threshold (1.00%)
+    n0: 129328 in 3 places, all below massif's threshold (1.00%)
+   n0: 409720 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566360 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41496 in 20 places, all below massif's threshold (1.00%)
+  n2: 1316782 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1314945 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 13485 in 41 places, all below massif's threshold (1.00%)
+   n0: 1837 in 2 places, all below massif's threshold (1.00%)
+  n2: 1287488 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1144448 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 554592 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 554592 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 673416 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 480800 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 441080 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 436784 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 192616 in 5 places, all below massif's threshold (1.00%)
+  n0: 419048 in 43 places, all below massif's threshold (1.00%)
+ n3: 2516522 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1141440 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 50560 in 4 places, all below massif's threshold (1.00%)
+  n1: 996288 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 996288 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 25792 in 4 places, all below massif's threshold (1.00%)
+  n0: 378794 in 104 places, all below massif's threshold (1.00%)
+ n0: 1479877 in 306 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n2: 563242 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 522384 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 82154 in 7 places, all below massif's threshold (1.00%)
+  n0: 40858 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=59
+#-----------
+time=18910394125
+mem_heap_B=32190536
+mem_heap_extra_B=4466952
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=19101352900
+mem_heap_B=32189912
+mem_heap_extra_B=4467656
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=19292309547
+mem_heap_B=32197066
+mem_heap_extra_B=4466030
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=19483264830
+mem_heap_B=32190859
+mem_heap_extra_B=4464165
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=19674231298
+mem_heap_B=32003087
+mem_heap_extra_B=4416249
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=19749252041
+mem_heap_B=32317189
+mem_heap_extra_B=4488891
+mem_stacks_B=0
+heap_tree=peak
+n6: 32317189 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n8: 25732694 0x494F08E: PyObject_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n5: 10151800 0x494EE8C: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n3: 4652640 0x495457F: PyType_GenericAlloc (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2340112 0x4A0E6A2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2274128 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 65984 in 2 places, all below massif's threshold (1.00%)
+    n2: 1509080 0x49D9FE2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1359120 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 149960 in 1 place, below massif's threshold (1.00%)
+    n0: 803448 in 78 places, all below massif's threshold (1.00%)
+   n3: 2969272 0x4954121: _PyObject_GC_NewVar (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1934024 0x4953FAB: PyTuple_New (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1552976 0x495D26B: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 381048 in 17 places, all below massif's threshold (1.00%)
+    n2: 704072 0x495FC83: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 397328 0x496CC50: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 306744 in 1 place, below massif's threshold (1.00%)
+    n0: 331176 in 10 places, all below massif's threshold (1.00%)
+   n1: 1228624 0x4967798: PyFunction_NewWithQualName (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1228624 0x4961DE4: _PyEval_EvalFrameDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1228352 0x495ED54: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 272 in 1 place, below massif's threshold (1.00%)
+   n1: 1127440 0x494EDF8: _PyObject_GC_New (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 1127440 in 33 places, all below massif's threshold (1.00%)
+   n0: 173824 in 10 places, all below massif's threshold (1.00%)
+  n5: 5489654 0x4950495: PyUnicode_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 3438401 0x495E025: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n4: 3438401 0x495D7F7: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1166921 0x495D295: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 988355 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 836352 in 8 places, all below massif's threshold (1.00%)
+     n0: 446773 0x495D2B4: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 0 in 2 places, all below massif's threshold (1.00%)
+   n2: 709082 0x497FB9D: PyUnicode_Substring (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 704206 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 537230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 166976 in 2 places, all below massif's threshold (1.00%)
+    n0: 4876 in 14 places, all below massif's threshold (1.00%)
+   n1: 591326 0x4A1E75D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 591326 0x15B3C392: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 505923 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 85403 in 2 places, all below massif's threshold (1.00%)
+   n1: 514553 0x494F7A5: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 514553 in 151 places, all below massif's threshold (1.00%)
+   n0: 236292 in 24 places, all below massif's threshold (1.00%)
+  n3: 4813560 0x4951837: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 2909592 0x4A0E709: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 2903544 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 2903376 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 168 in 1 place, below massif's threshold (1.00%)
+    n0: 6048 in 2 places, all below massif's threshold (1.00%)
+   n2: 1483328 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1331008 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1331008 in 53 places, all below massif's threshold (1.00%)
+    n0: 152320 in 3 places, all below massif's threshold (1.00%)
+   n0: 420640 in 3 places, all below massif's threshold (1.00%)
+  n2: 1566416 0x4958766: _PyObject_New (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1524864 0x495E466: PyCode_NewWithPosOnlyArgs (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 1508672 0x495D6EA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1039104 0x495D363: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 469568 in 8 places, all below massif's threshold (1.00%)
+    n0: 16192 in 1 place, below massif's threshold (1.00%)
+   n0: 41552 in 20 places, all below massif's threshold (1.00%)
+  n2: 1316782 0x495DE55: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1314945 0x495DDC1: PyBytes_FromStringAndSize (in /usr/lib64/libpython3.9.so.1.0)
+    n3: 1301460 0x495D3CA: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 889744 0x495D5CC: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 401155 0x495D68F: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 10561 in 8 places, all below massif's threshold (1.00%)
+    n0: 13485 in 41 places, all below massif's threshold (1.00%)
+   n0: 1837 in 2 places, all below massif's threshold (1.00%)
+  n2: 1296752 0x495191D: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1153712 0x4951D72: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 589856 0x4950E30: PyDict_SetDefault (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 589856 0x4950A11: PyUnicode_InternInPlace (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 0 in 1 place, below massif's threshold (1.00%)
+    n1: 563856 0x4954ACF: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 563856 in 15 places, all below massif's threshold (1.00%)
+   n0: 143040 in 1 place, below massif's threshold (1.00%)
+  n2: 678552 0x49D84EC: PyDict_Copy (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 485432 0x49D9F61: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n2: 445712 0x496871A: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 441416 0x4968553: _PyObject_MakeTpCall (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 4296 in 1 place, below massif's threshold (1.00%)
+    n0: 39720 in 1 place, below massif's threshold (1.00%)
+   n0: 193120 in 5 places, all below massif's threshold (1.00%)
+  n0: 419178 in 43 places, all below massif's threshold (1.00%)
+ n3: 2545746 0x49550FA: PyMem_Malloc (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 1151168 0x4A3DE84: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 1090880 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 1090880 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 1090880 0x4A3DA65: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n0: 60288 in 4 places, all below massif's threshold (1.00%)
+  n1: 1000832 0x4A3DF64: ??? (in /usr/lib64/libpython3.9.so.1.0)
+   n2: 1000832 0x4A3DE63: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n1: 970496 0x4A3DD16: ??? (in /usr/lib64/libpython3.9.so.1.0)
+     n0: 970496 0x4A3DB6E: ??? (in /usr/lib64/libpython3.9.so.1.0)
+    n0: 30336 in 4 places, all below massif's threshold (1.00%)
+  n0: 393746 in 104 places, all below massif's threshold (1.00%)
+ n0: 1556822 in 305 places, all below massif's threshold (1.00%)
+ n1: 1397238 0x16695CAE: ??? (in /usr/lib64/python3.9/site-packages/_awscrt.cpython-39-x86_64-linux-gnu.so)
+  n0: 1397238 in 35 places, all below massif's threshold (1.00%)
+ n2: 572349 0x49724B2: ??? (in /usr/lib64/libpython3.9.so.1.0)
+  n2: 531302 0x49723EB: _PyUnicodeWriter_Finish (in /usr/lib64/libpython3.9.so.1.0)
+   n1: 440230 0x15B3C4FB: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+    n2: 440230 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 439660 0x15B3AFE0: ??? (in /usr/lib64/python3.9/lib-dynload/_json.cpython-39-x86_64-linux-gnu.so)
+     n0: 570 in 1 place, below massif's threshold (1.00%)
+   n0: 91072 in 7 places, all below massif's threshold (1.00%)
+  n0: 41047 in 2 places, all below massif's threshold (1.00%)
+ n1: 512340 0x1588B29D: CRYPTO_zalloc (in /usr/lib64/libcrypto.so.3.0.8)
+  n0: 512340 in 146 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=65
+#-----------
+time=19940218170
+mem_heap_B=32460554
+mem_heap_extra_B=4508310
+mem_stacks_B=0
+heap_tree=empty

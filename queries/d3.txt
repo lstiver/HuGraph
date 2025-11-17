@@ -1,0 +1,8 @@
+select ?person1 ?person2 ?person3 ?person4 ?institution
+where { 
+?person1 <http://dbpedia.org/property/influences> ?person2 .
+?person2 <http://dbpedia.org/property/influences> ?person3 .
+?person3 <http://dbpedia.org/property/influences> ?person4 .
+?person4 <http://dbpedia.org/property/institution> ?institution .
+?institution <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+}

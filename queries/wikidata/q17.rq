@@ -1,0 +1,6 @@
+SELECT ?person ?date
+WHERE{
+  ?person <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q5> .
+  ?person <http://www.wikidata.org/prop/direct/P509> <http://www.wikidata.org/entity/Q468455> .
+  ?person <http://www.wikidata.org/prop/direct/P570> ?date .
+}

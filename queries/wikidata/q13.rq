@@ -1,0 +1,5 @@
+SELECT ?exoplanet ?image
+WHERE {
+  ?exoplanet <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q44559> .
+  ?exoplanet <http://www.wikidata.org/prop/direct/P18> ?image .
+}

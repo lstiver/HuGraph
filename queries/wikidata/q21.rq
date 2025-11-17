@@ -1,0 +1,5 @@
+SELECT ?thing ?class
+WHERE{
+	?thing <http://www.wikidata.org/prop/direct/P31> ?class .
+	?thing <http://www.wikidata.org/prop/direct/P279> ?class .
+}

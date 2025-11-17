@@ -1,0 +1,6 @@
+SELECT ?taxon ?eponym ?taxonName 
+WHERE{
+  ?taxon <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q16521> .
+  ?taxon <http://www.wikidata.org/prop/direct/P225> ?taxonName .
+  ?taxon <http://www.wikidata.org/prop/direct/P138> ?eponym .
+}

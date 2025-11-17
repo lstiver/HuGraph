@@ -1,0 +1,4 @@
+select ?subject ?industries ?manufacturer ?products 
+where { 
+<http://dbpedia.org/resource/Category:Mazda> <http://www.w3.org/2004/02/skos/core#subject> ?subject .
+}

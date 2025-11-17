@@ -1,0 +1,6 @@
+select ?parents ?before ?n 
+where { 
+    ?parents <http://dbpedia.org/property/before> ?before .
+    ?before <http://dbpedia.org/property/image> ?n .
+}
+

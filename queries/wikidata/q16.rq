@@ -1,0 +1,8 @@
+SELECT ?gender ?theorem ?name ?death ?formula
+WHERE {
+  ?theorem <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q65943> .
+  ?theorem <http://www.wikidata.org/prop/direct/P138> ?name .
+  ?name <http://www.wikidata.org/prop/direct/P570> ?death .
+  ?name <http://www.wikidata.org/prop/direct/P21> ?gender .
+  ?theorem <http://www.wikidata.org/prop/direct/P2534> ?formula .
+}

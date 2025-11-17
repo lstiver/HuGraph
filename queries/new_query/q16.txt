@@ -1,0 +1,6 @@
+SELECT ?v0 ?v1 ?v3 
+WHERE {
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v1 .
+	?v0 <http://purl.org/stuff/rev#hasReview> <http://db.uwaterloo.ca/~galuc/wsdbm/Review938> .
+	?v0 <http://schema.org/caption> ?v3 .
+}

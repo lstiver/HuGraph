@@ -1,0 +1,7 @@
+SELECT ?painting ?location ?image
+where {
+  ?painting <http://www.wikidata.org/prop/direct/P276> ?collection .
+  ?painting <http://www.wikidata.org/prop/direct/P170> <http://www.wikidata.org/entity/Q41264> .
+  ?painting <http://www.wikidata.org/prop/direct/P18> ?image .
+  ?collection <http://www.wikidata.org/prop/direct/P625> ?location .
+}

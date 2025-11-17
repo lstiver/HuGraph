@@ -1,0 +1,8 @@
+select ?subject ?industries ?manufacturer ?products ?model 
+where { 
+?subject <http://www.w3.org/2004/02/skos/core#subject> <http://dbpedia.org/resource/Category:Photography_companies> .
+?subject <http://dbpedia.org/property/industry> ?industries .
+?manufacturer <http://dbpedia.org/property/manufacturer> ?subject .
+?subject <http://dbpedia.org/property/products> ?products .
+?model <http://dbpedia.org/property/model> ?subject .
+}

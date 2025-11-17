@@ -1,0 +1,5 @@
+SELECT ?pmid ?doi
+WHERE{
+  ?item <http://www.wikidata.org/prop/direct/P698> ?pmid .
+  ?item <http://www.wikidata.org/prop/direct/P356> ?doi .
+}

@@ -1,0 +1,4 @@
+SELECT ?v0 ?v1
+WHERE { 
+        ?v0 <http://schema.org/caption> ?v1 . 
+}

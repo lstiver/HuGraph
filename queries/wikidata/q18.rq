@@ -1,0 +1,6 @@
+SELECT ?movie ?narrative_location ?coordinates
+WHERE {
+   ?movie <http://www.wikidata.org/prop/direct/P840> ?narrative_location .
+   ?movie <http://www.wikidata.org/prop/direct/P31> <http://www.wikidata.org/entity/Q11424> .
+   ?narrative_location <http://www.wikidata.org/prop/direct/P625> ?coordinates .
+}

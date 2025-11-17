@@ -1,0 +1,5 @@
+SELECT ?v0 ?v2 
+WHERE { 
+        ?v0 <http://ogp.me/ns#tag> ?v1 . 
+        ?v0 <http://schema.org/caption> ?v2 . 
+}

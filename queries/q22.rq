@@ -1,0 +1,5 @@
+select ?p ?z ?n 
+where {
+    ?p <http://dbpedia.org/property/location> ?z .
+    ?z <http://dbpedia.org/property/name> ?n .
+}

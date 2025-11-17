@@ -1,0 +1,5 @@
+SELECT ?inventor ?gadget 
+WHERE {
+  ?inventor <http://www.wikidata.org/prop/direct/P157> ?gadget .
+  ?gadget <http://www.wikidata.org/prop/direct/P61> ?inventor .
+}

@@ -1,0 +1,4 @@
+select ?manufacturer ?subject 
+where { 
+?manufacturer <http://dbpedia.org/property/manufacturer> ?subject .
+}

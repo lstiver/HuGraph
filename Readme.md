@@ -1,31 +1,30 @@
 # HuGraph：An Economical Cloud-Native RDF Store
 ## Overview
-HuGraph 是一个基于 C++17 的云原生RDF存储查询系统，集成了 LevelDB、Apache Arrow 和阿里云 OSS SDK，能够在满足时间约束的情况下最小化经济成本，同时提供可接受的查询性能。目前有两个版本，分别基于amazon和aliyun，amazon在main分支下，aliyun在分支aliyun下。
+HuGraph is a cloud-native RDF storage and query system built on C++17, integrating LevelDB, Apache Arrow, and Alibaba Cloud OSS SDK. It aims to minimize economic costs while meeting time constraints and providing acceptable query performance. Currently, two versions are available: the Amazon-based version is on the main branch, and the Aliyun-based version is on the aliyun branch.
 
-功能特性
+Features
 
-🚀 高性能: 基于 C++17 和现代编译优化
+🚀 High Performance: Built on C++17 with modern compilation optimizations
 
-💾 存算分离: 集成阿里云 OSS 实现存储与计算分离
+💾 Storage-Computation Separation: Integrated with Alibaba Cloud OSS to decouple storage and computation
 
-📊 多格式支持: 通过 Apache Arrow 支持多种数据格式
+📊 Multi-format Support: Supports various data formats through Apache Arrow
 
-🔍 高效查询: 优化的查询算法和数据处理管道
+🔍 Efficient Querying: Optimized query algorithms and data processing pipelines
 
 ### Experimental environment
-操作系统: Linux iZn4a7auawqabklo8wd4xuZ 5.10.134-19.1.al8.x86_64
+Operating System: Linux iZn4a7auawqabklo8wd4xuZ 5.10.134-19.1.al8.x86_64
 
-编译器: GCC 10.2.1 20200825
+Compiler: GCC 10.2.1 20200825
 
-构建工具: CMake 3.26.5
+Build Tool: CMake 3.26.5
 
-硬件配置: 2CPU 8 GB RAM
+Hardware Configuration: 2 CPUs, 8 GB RAM
 
-## Quickstart
-### Install dependencies
-1. 基础开发工具
-
-```bash
+Quickstart
+Install Dependencies
+1. Basic Development Tools
+bash
 sudo yum groupinstall -y "Development Tools"
 sudo yum install -y \
     cmake3 \
@@ -33,37 +32,31 @@ sudo yum install -y \
     libcurl-devel \
     openssl-devel \
     zlib-devel
-```
-2. LevelDB 安装
+2. LevelDB Installation
+Option 1: Package Manager Installation
 
-方法一：包管理器安装
-```bash
+bash
 sudo yum install -y leveldb-devel
-```
+Option 2: Source Code Compilation
 
-方法二：源码编译安装
-
-```bash
+bash
 git clone https://github.com/google/leveldb.git
 cd leveldb
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_LIBS=ON ..
 make -j$(nproc)
 sudo make install
-```
+3. Apache Arrow Installation
+Required modules: arrow_shared, ArrowAcero, ArrowDataset, ArrowCompute
 
-3. Apache Arrow 安装
+Option 1: Package Manager Installation
+Refer to the Apache Arrow Official Installation Guide
 
-需要使用到的模块有：arrow_shared,ArrowAcero,ArrowDataset,ArrowCompute
+Option 2: Source Code Compilation
+Refer to the Apache Arrow Official Build Documentation
 
-方法一：包管理器安装
-参考apacha arrow[官方安装指南](https://arrow.apache.org/install/)
-
-方法二：源码编译安装
-参考apacha arrow[官方构建文档](https://arrow.apache.org/docs/developers/cpp/building.html#building-arrow-cpp)
-
-4. 阿里云 OSS SDK 安装
-```bash
+4. Alibaba Cloud OSS SDK Installation
+bash
 git clone https://github.com/aliyun/aliyun-oss-cpp-sdk.git
 cd aliyun-oss-cpp-sdk
 mkdir build && cd build
@@ -75,11 +68,8 @@ cmake \
 
 make -j$(nproc)
 sudo make install
-```
-
-5. Amazon AWS SDK安装（如果使用阿里云部署，无需安装）
-
-```bash
+5. Amazon AWS SDK Installation (Optional, only needed for Amazon deployment)
+bash
 sudo yum install libcurl-devel openssl-devel libuuid-devel pulseaudio-libs-devel
 git clone --recurse-submodules https://github.com/aws/aws-sdk-cpp
 mkdir sdk_build
@@ -87,44 +77,34 @@ cd sdk_build
 cmake ../aws-sdk-cpp -DCMAKE_BUILD_TYPE=Debug -DCMAKE_PREFIX_PATH=/usr/local/ -DCMAKE_INSTALL_PREFIX=/usr/local/ -DBUILD_ONLY="s3"
 cmake --build . --config=Debug
 cmake --install . --config=Debug
-```
-
-### Build Project
-1. 克隆项目
-```bash
+Build the Project
+1. Clone the Repository
+bash
 git clone https://github.com/lstiver/HuGraph.git
 cd HuGraph
-```
-2. 配置环境变量
+2. Configure Environment Variables
+For Amazon Deployment:
 
-#### Amazon 
-```bash
+bash
 aws configure
-```
+For Aliyun Deployment:
 
-#### aliyun
-
-edpoint默认为华中-武汉，可自行在main函数中修改
-```bash
+bash
 echo 'export ALIBABA_CLOUD_ACCESS_KEY_ID="LTAI5tYourAccessKeyId"' >> ~/.bashrc
 echo 'export ALIBABA_CLOUD_ACCESS_KEY_SECRET="K4HcYourAccessKeySecret"' >> ~/.bashrc
 source ~/.bashrc
-```
+Note: The endpoint defaults to Central China (Wuhan). You can modify it in the main function if needed.
 
-2. 编译项目
-```bash
+3. Build the Project
+bash
 mkdir build && cd build
 cmake ..
 make
-```
-
-3. 运行程序
-```bash
+4. Run the Program
+bash
 ./S3C++
-```
+Contributing
+We welcome Issue submissions and Pull Requests to improve the project.
 
-# 贡献
-欢迎提交 Issue 和 Pull Request 来改进项目。
-
-# 联系我们
-如有问题，请通过邮箱: hnu16pp@hnu.edu.cn 联系我们
+Contact Us
+For any questions, please contact us via email: hnu16pp@hnu.edu.cn

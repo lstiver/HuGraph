@@ -129,6 +129,3 @@ make
 
 We welcome Issue submissions and Pull Requests to improve the project.
 
-## Contact Us
-
-For any questions, please contact us via email: hnu16pp@hnu.edu.cn

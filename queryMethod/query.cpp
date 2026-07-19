@@ -53,12 +53,11 @@ shared_ptr<arrow::Table> parseCompletePayload (const Aws::Vector<unsigned char>:
     read_options.column_names = col; //设置列名
     auto convert_options = arrow::csv::ConvertOptions::Defaults();
     for (const auto& column_name : col) {
-        // cout<<column_name<<endl;
         convert_options.column_types[column_name] = arrow::int32();  // 将列设置为 int32 类型
     }
-    if(col.size() == 2){
-        read_options.skip_rows = 1; // 跳过表头
-    }
+    // if(col.size() == 2){
+        // read_options.skip_rows = 1; // 跳过表头
+    // }
     // Create a reader
     arrow::io::IOContext ioContext;
     auto reader = std::make_shared<arrow::io::BufferReader>(from.base(), std::distance(from, to));
@@ -116,7 +115,7 @@ shared_ptr<arrow::Table> getObject(
     size_t length)
 {
     auto start_time = std::chrono::high_resolution_clock::now();
-    auto executor = Aws::MakeShared<Aws::Utils::Threading::PooledThreadExecutor>("executor", 1);
+    auto executor = Aws::MakeShared<Aws::Utils::Threading::PooledThreadExecutor>("executor", std::thread::hardware_concurrency()-1);
     Aws::Transfer::TransferManagerConfiguration transfer_config(executor.get());
     transfer_config.s3Client = awsClient;
 
@@ -418,7 +417,6 @@ shared_ptr<arrow::Table> s3SelectbyIndex(
     selectObjectContentRequest.SetScanRange(scanRange);
     selectObjectContentRequest.SetBucket(bucket);
     selectObjectContentRequest.SetKey(key);
-    // selectObjectContentRequest.SetScanRange;
     selectObjectContentRequest.SetExpressionType(Aws::S3::Model::ExpressionType::SQL);
     selectObjectContentRequest.SetExpression(sql);
 

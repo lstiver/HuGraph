@@ -10,7 +10,11 @@ bool compareByTime(const QueryInfo& a, const QueryInfo& b) {
 }
 
 pair<vector<string>, vector<vector<string>>> get_query(string file_path){
+<<<<<<< HEAD
   string dbPath = "/data/watdiv1000m/index/";
+=======
+  string dbPath = "/data/wikidata/index";
+>>>>>>> 0a3c54903d3a898f13288c6bf79b524f7d17d3d4
 
   // 打开levedb
   leveldb::DB* db;
@@ -199,7 +203,11 @@ void writeVectorToCSV(ofstream &csvFile, const vector<string>& resultVector) {
 void printResult(const shared_ptr<arrow::Table> table) {
   int64_t num_columns = table->num_columns();
   int64_t num_rows = table->num_rows();
+<<<<<<< HEAD
   string dbPath = "/data/watdiv1000m/result_index";
+=======
+  string dbPath = "/data/wikidata/result_index";
+>>>>>>> 0a3c54903d3a898f13288c6bf79b524f7d17d3d4
 
   // 打开levedb
   leveldb::DB* db;

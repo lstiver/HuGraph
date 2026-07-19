@@ -142,8 +142,8 @@ void handleUpdateMode(shared_ptr<Aws::S3::S3Client> s3Client) {
 }
 
 void ExeQuery(string query_name, shared_ptr<Aws::S3::S3Client> awsClient){
-  // const string file_path = "/home/ec2-user/s3/S3C++/queries/wikidata/" + query_name + ".rq";
-  const string file_path = "/home/ec2-user/s3/S3C++/queries/new_query/" + query_name + ".txt";
+  const string file_path = "/home/ec2-user/s3/S3C++/queries/wikidata/" + query_name + ".rq";
+  // const string file_path = "/home/ec2-user/s3/S3C++/queries/new_query/" + query_name + ".txt";
   // const string file_path = "/home/ec2-user/s3/S3C++/queries/" + query_name + ".rq";
   high_resolution_clock::time_point beginTime = high_resolution_clock::now();
 
@@ -214,8 +214,8 @@ void ExeQuery(string query_name, shared_ptr<Aws::S3::S3Client> awsClient){
           col2.emplace_back(object);
         }
                 
-        // int method = it.method;
-        int method =1;
+        int method = it.method;
+        // int method =1;
         string keyName;
         keyName = it.keyName +".csv"; //排序后这里要修改
         cout<<"第"<<index_+1<<"个查询"<<keyName<<endl;

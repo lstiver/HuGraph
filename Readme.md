@@ -129,3 +129,5 @@ make
 
 We welcome Issue submissions and Pull Requests to improve the project.
 
+## Technical Reports
+- [Technical Report](Technical_Report.pdf)

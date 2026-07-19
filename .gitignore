@@ -5,3 +5,4 @@
 *.logbuild/
 S3C++
 *.o
+_deps/

@@ -10,7 +10,7 @@ bool compareByTime(const QueryInfo& a, const QueryInfo& b) {
 }
 
 pair<vector<string>, vector<vector<string>>> get_query(string file_path){
-  string dbPath = "/data/watdiv500m/index";
+  string dbPath = "/data/watdiv1000m/index/";
 
   // 打开levedb
   leveldb::DB* db;
@@ -147,19 +147,19 @@ vector<QueryInfo> getTimeAndCost(const string &bucket,
   query1.index = index;
   time_and_cost.emplace_back(query1);
 
-  // query1.method= 2;  // Using integer values for keys to represent "selectINDEX+selectDATA"
-  // query1.time = 0.0000092584*(index_size+total);
-  // // query1.cost = totallength * (0.002 + 0.0007) + 0.002 * totallength;
-  // query1.cost = 0.0000092584*(index_size+total)*0.96/3600+0.002*((index_size/1024/1024/1024)+totallength)+0.0007*totallength;
-  // if (end > 0) {
-  //     time_and_cost.emplace_back(query1);
-  // }
+  query1.method= 2;  // Using integer values for keys to represent "selectINDEX+selectDATA"
+  query1.time = 0.0000092584*(index_size+total);
+  // query1.cost = totallength * (0.002 + 0.0007) + 0.002 * totallength;
+  query1.cost = 0.0000092584*(index_size+total)*0.96/3600+0.002*((index_size/1024/1024/1024)+totallength)+0.0007*totallength;
+  if (end > 0) {
+      time_and_cost.emplace_back(query1);
+  }
 
-  // query1.method= 3;  // Using integer values for keys to represent "s3Select"
-  // query1.time = size* 0.0000092584;
-  // // query1.cost = totallength * 0.0007 * 0.96/3600 + 0.002 * (size/1024/1024/1024);
-  // query1.cost = size* 0.0000092584*0.96/3600 + 0.002* (size/1024/1024/1024);
-  // time_and_cost.emplace_back(query1);
+  query1.method= 3;  // Using integer values for keys to represent "s3Select"
+  query1.time = size* 0.0000092584;
+  // query1.cost = totallength * 0.0007 * 0.96/3600 + 0.002 * (size/1024/1024/1024);
+  query1.cost = size* 0.0000092584*0.96/3600 + 0.002* (size/1024/1024/1024);
+  time_and_cost.emplace_back(query1);
 
   query1.method= 4;  // Using integer values for keys to represent "selectINDEX+getobjectDATA"
   query1.time = 0.0000092584*index_size+0.0000130980*total;
@@ -175,12 +175,12 @@ vector<QueryInfo> getTimeAndCost(const string &bucket,
       time_and_cost.emplace_back(query1);
   }
 
-  // query1.method= 6;  // Using integer values for keys to represent "getobjectINDEX+selectDATA"
-  // query1.time = 0.0000130980*index_size+0.0000092584*total;
-  // query1.cost = (0.0000130980*index_size+0.0000092584*total)*0.96/3600+(0.002+0.0007)*totallength;
-  // if (end > 0) {
-  //     time_and_cost.emplace_back(query1);
-  // }
+  query1.method= 6;  // Using integer values for keys to represent "getobjectINDEX+selectDATA"
+  query1.time = 0.0000130980*index_size+0.0000092584*total;
+  query1.cost = (0.0000130980*index_size+0.0000092584*total)*0.96/3600+(0.002+0.0007)*totallength;
+  if (end > 0) {
+      time_and_cost.emplace_back(query1);
+  }
    for (const auto& query : time_and_cost) {
         cout << "key: " << query.method << ", time: " << query.time << ", cost: " << query.cost << ", index: " << query.index << endl;
     }
@@ -199,7 +199,7 @@ void writeVectorToCSV(ofstream &csvFile, const vector<string>& resultVector) {
 void printResult(const shared_ptr<arrow::Table> table) {
   int64_t num_columns = table->num_columns();
   int64_t num_rows = table->num_rows();
-  string dbPath = "/data/watdiv500m/result_index";
+  string dbPath = "/data/watdiv1000m/result_index";
 
   // 打开levedb
   leveldb::DB* db;
@@ -220,7 +220,7 @@ for (int64_t i = 0; i < num_columns; ++i){
 }
 cout<<endl;
 // 遍历每一行
-for (int64_t row = 0; row < num_rows; ++row) {
+for (int64_t row = 0; row < 20; ++row) {
     for (int64_t i = 0; i < num_columns; ++i) {
         // 获取每一列
         auto column = table->column(i);

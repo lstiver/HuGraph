@@ -12,6 +12,7 @@
 #include "query.h"
 #include "merge.h"
 #include "order.h"
+#include "update.h"
 #include <chrono>
 #include <memory>
 #include <aws/core/Aws.h>
@@ -24,6 +25,9 @@ using namespace Aws::S3::Model;
 using namespace std;
 
 void ExeQuery(string query_name, shared_ptr<Aws::S3::S3Client> awsClient);
+void showMainMenu();
+void handleQueryMode(shared_ptr<Aws::S3::S3Client> s3Client);
+void handleUpdateMode(shared_ptr<Aws::S3::S3Client> s3Client);
 int index_ = 0;
 vector<string>col1;
 vector<string>col2;
@@ -31,7 +35,6 @@ string bucket = "watdiv100mconvert";
 int totalTime = 45870000;  // 最大时间
 
 int main() {
-  string str;
     Aws::SDKOptions options;
     Aws::InitAPI(options);
     Aws::S3::S3ClientConfiguration clientConfig;
@@ -39,28 +42,103 @@ int main() {
     clientConfig.useUSEast1RegionalEndPointOption = Aws::S3::US_EAST_1_REGIONAL_ENDPOINT_OPTION::REGIONAL;
     clientConfig.useVirtualAddressing = true;
     auto s3Client = std::make_shared<Aws::S3::S3Client>(clientConfig);
-  {
-    while(true){
-      cout<<"请输入查询数据集(输入exit结束程序):"<<endl;
-      cin>>str;
-      if(str == "exit") {
-        break;
-      } else {
-        bucket = str;
-      }
-      cout<<"请输入查询名称(输入exit结束程序):"<<endl;
-      cin>>str;
-      if(str == "exit") {
-        break;
-      }
-      ExeQuery(str, s3Client);
-      // testindex(s3Client);
-      // test(s3Client);
-   }
-    Aws::ShutdownAPI(options);
-    spdlog::info("S3 Client连接断开,结束程序");
-  }
+    {
+        string mode;
+        while(true) {
+            showMainMenu();
+            cin >> mode;
+            
+            if(mode == "exit") {
+                break;
+            } else if(mode == "1") {
+                handleQueryMode(s3Client);
+            } else if(mode == "2") {
+                handleUpdateMode(s3Client);
+            } else {
+                cout << "无效的选择，请重新输入" << endl;
+            }
+        }
+        Aws::ShutdownAPI(options);
+        spdlog::info("S3 Client连接断开,结束程序");
+    }
     return 0;
+}
+
+void showMainMenu() {
+    cout << "\n========== S3C++ 主菜单 ==========" << endl;
+    cout << "请选择操作模式:" << endl;
+    cout << "1. 查询数据 (Query)" << endl;
+    cout << "2. 更新数据 (Update)" << endl;
+    cout << "输入exit结束程序" << endl;
+    cout << "==================================" << endl;
+    cout << "请输入选项: ";
+}
+
+void handleQueryMode(shared_ptr<Aws::S3::S3Client> s3Client) {
+    string str;
+    cout << "\n--- 查询模式 ---" << endl;
+    cout << "请输入查询数据集(输入exit返回主菜单):" << endl;
+    cin >> str;
+    if(str == "exit") {
+        return;
+    } else {
+        bucket = str;
+    }
+    cout << "请输入查询名称(输入exit返回主菜单):" << endl;
+    cin >> str;
+    if(str == "exit") {
+        return;
+    }
+    // testQuery(str,s3Client);
+    ExeQuery(str, s3Client);
+}
+
+void handleUpdateMode(shared_ptr<Aws::S3::S3Client> s3Client) {
+    string str;
+    cout << "\n--- 更新模式 ---" << endl;
+    cout << "请输入S3存储桶名称(输入exit返回主菜单):" << endl;
+    cin >> str;
+    if(str == "exit") {
+        return;
+    }
+    string update_bucket = str;
+    
+    cout << "请输入三元组文件路径(输入exit返回主菜单):" << endl;
+    cin >> str;
+    if(str == "exit") {
+        return;
+    }
+    string triple_file = str;
+    
+    cout << "请选择操作类型:" << endl;
+    cout << "1. 插入数据 (Insert)" << endl;
+    cout << "2. 删除数据 (Delete)" << endl;
+    cout << "输入exit返回主菜单" << endl;
+    cout << "请输入选项: ";
+    
+    cin >> str;
+    if(str == "exit") {
+        return;
+    }
+    
+    UpdateType update_type;
+    if(str == "1") {
+        update_type = UpdateType::INSERT;
+        cout << "执行插入操作..." << endl;
+    } else if(str == "2") {
+        update_type = UpdateType::DELETE;
+        cout << "执行删除操作..." << endl;
+    } else {
+        cout << "无效的选择，返回主菜单" << endl;
+        return;
+    }
+    
+    high_resolution_clock::time_point start = high_resolution_clock::now();
+    executeUpdate(update_bucket, triple_file, update_type, s3Client);
+    high_resolution_clock::time_point endTime = high_resolution_clock::now();
+    milliseconds timeInterval = chrono::duration_cast<milliseconds>(endTime - start);
+    spdlog::info("========== Query completed in {} ms ==========", timeInterval.count());
+    cout << "update1000rows总耗时：" << timeInterval.count() << "ms" << endl;
 }
 
 void ExeQuery(string query_name, shared_ptr<Aws::S3::S3Client> awsClient){

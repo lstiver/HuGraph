@@ -11,6 +11,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/S3C++.dir/sort/sort.cpp.o.d"
   "CMakeFiles/S3C++.dir/translate/translate.cpp.o"
   "CMakeFiles/S3C++.dir/translate/translate.cpp.o.d"
+  "CMakeFiles/S3C++.dir/update/update.cpp.o"
+  "CMakeFiles/S3C++.dir/update/update.cpp.o.d"
   "S3C++"
   "S3C++.pdb"
 )

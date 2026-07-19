@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfpdb-aws.a CMakeFiles/fpdb-aws.dir/src/AWSClient.cpp.o CMakeFiles/fpdb-aws.dir/src/AWSConfig.cpp.o CMakeFiles/fpdb-aws.dir/src/S3Util.cpp.o CMakeFiles/fpdb-aws.dir/src/ProfileAWSCredentialsProviderChain.cpp.o CMakeFiles/fpdb-aws.dir/src/AirMettleClientAuthHandler.cpp.o
-/usr/bin/ranlib libfpdb-aws.a

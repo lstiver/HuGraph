@@ -1,0 +1,4 @@
+SELECT ?s ?o 
+WHERE {
+  ?s <predicate5> <subject10> .
+}

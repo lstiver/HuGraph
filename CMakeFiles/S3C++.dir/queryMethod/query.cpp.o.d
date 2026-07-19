@@ -775,4 +775,56 @@ CMakeFiles/S3C++.dir/queryMethod/query.cpp.o: \
  /home/ec2-user/s3/S3C++/ArrowInputStream/ArrowInputStream.h \
  /usr/include/arrow/ipc/writer.h /usr/include/arrow/ipc/dictionary.h \
  /usr/include/arrow/ipc/message.h /usr/include/arrow/ipc/options.h \
- /usr/include/arrow/io/caching.h /usr/include/arrow/util/compression.h
+ /usr/include/arrow/io/caching.h /usr/include/arrow/util/compression.h \
+ /usr/include/arrow/ipc/api.h /usr/include/arrow/ipc/feather.h \
+ /usr/include/arrow/ipc/json_simple.h /usr/include/arrow/ipc/reader.h \
+ /usr/include/arrow/util/async_generator.h \
+ /usr/include/arrow/util/async_generator_fwd.h \
+ /usr/include/arrow/util/async_util.h /usr/include/arrow/util/mutex.h \
+ /usr/include/arrow/util/io_util.h /usr/include/c++/11/csignal \
+ /usr/include/signal.h /usr/include/bits/signum-generic.h \
+ /usr/include/bits/signum-arch.h /usr/include/bits/types/sig_atomic_t.h \
+ /usr/include/bits/types/siginfo_t.h /usr/include/bits/types/__sigval_t.h \
+ /usr/include/bits/siginfo-arch.h /usr/include/bits/siginfo-consts.h \
+ /usr/include/bits/siginfo-consts-arch.h \
+ /usr/include/bits/types/sigval_t.h /usr/include/bits/types/sigevent_t.h \
+ /usr/include/bits/sigevent-consts.h /usr/include/bits/sigaction.h \
+ /usr/include/bits/sigcontext.h /usr/include/bits/types/stack_t.h \
+ /usr/include/sys/ucontext.h /usr/include/bits/sigstack.h \
+ /usr/include/bits/sigstksz.h /usr/include/bits/ss_flags.h \
+ /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
+ /usr/include/bits/signal_ext.h /usr/include/arrow/util/windows_fixup.h \
+ /usr/include/arrow/util/queue.h \
+ /usr/include/arrow/vendored/ProducerConsumerQueue.h \
+ /usr/include/arrow/util/range.h /usr/include/arrow/util/vector.h \
+ /usr/include/arrow/util/algorithm.h /usr/include/arrow/util/logging.h \
+ /usr/include/arrow/dataset/dataset.h \
+ /usr/include/arrow/compute/expression.h \
+ /usr/include/arrow/compute/type_fwd.h \
+ /usr/include/arrow/util/small_vector.h \
+ /usr/include/arrow/dataset/type_fwd.h \
+ /usr/include/arrow/dataset/visibility.h \
+ /usr/include/arrow/filesystem/type_fwd.h \
+ /usr/include/arrow/dataset/api.h /usr/include/arrow/dataset/discovery.h \
+ /usr/include/arrow/dataset/partition.h \
+ /usr/include/arrow/dataset/file_base.h \
+ /usr/include/arrow/dataset/scanner.h /usr/include/arrow/acero/options.h \
+ /usr/include/arrow/acero/type_fwd.h \
+ /usr/include/arrow/acero/visibility.h \
+ /usr/include/arrow/compute/api_aggregate.h \
+ /usr/include/arrow/compute/function_options.h \
+ /usr/include/arrow/compute/api_vector.h \
+ /usr/include/arrow/compute/ordering.h /usr/include/arrow/compute/exec.h \
+ /usr/include/arrow/dataset/projector.h \
+ /usr/include/arrow/filesystem/filesystem.h \
+ /usr/include/arrow/dataset/file_csv.h \
+ /usr/include/arrow/dataset/file_json.h /usr/include/arrow/json/options.h \
+ /usr/include/arrow/json/type_fwd.h /usr/include/arrow/dataset/file_ipc.h \
+ /usr/include/arrow/dataset/file_orc.h \
+ /usr/include/arrow/dataset/file_parquet.h \
+ /usr/include/arrow/dataset/plan.h /usr/include/arrow/acero/exec_plan.h \
+ /usr/include/arrow/compute/api.h /usr/include/arrow/compute/api_scalar.h \
+ /usr/include/arrow/compute/cast.h /usr/include/arrow/compute/function.h \
+ /usr/include/arrow/compute/kernel.h \
+ /usr/include/arrow/compute/registry.h \
+ /usr/include/arrow/compute/row/grouper.h

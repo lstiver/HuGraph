@@ -105,51 +105,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ec2-user/s3/S3C++/CMakeFiles /home/ec2-user/s3/S3C++//CMakeFiles/progress.marks
@@ -193,162 +148,6 @@ S3C++: cmake_check_build_system
 S3C++/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/S3C++.dir/build.make CMakeFiles/S3C++.dir/build
 .PHONY : S3C++/fast
-
-#=============================================================================
-# Target rules for targets named leveldb
-
-# Build rule for target.
-leveldb: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 leveldb
-.PHONY : leveldb
-
-# fast build rule for target.
-leveldb/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/leveldb.dir/build.make leveldb/CMakeFiles/leveldb.dir/build
-.PHONY : leveldb/fast
-
-#=============================================================================
-# Target rules for targets named leveldbutil
-
-# Build rule for target.
-leveldbutil: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 leveldbutil
-.PHONY : leveldbutil
-
-# fast build rule for target.
-leveldbutil/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/leveldbutil.dir/build.make leveldb/CMakeFiles/leveldbutil.dir/build
-.PHONY : leveldbutil/fast
-
-#=============================================================================
-# Target rules for targets named leveldb_tests
-
-# Build rule for target.
-leveldb_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 leveldb_tests
-.PHONY : leveldb_tests
-
-# fast build rule for target.
-leveldb_tests/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/leveldb_tests.dir/build.make leveldb/CMakeFiles/leveldb_tests.dir/build
-.PHONY : leveldb_tests/fast
-
-#=============================================================================
-# Target rules for targets named c_test
-
-# Build rule for target.
-c_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 c_test
-.PHONY : c_test
-
-# fast build rule for target.
-c_test/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/c_test.dir/build.make leveldb/CMakeFiles/c_test.dir/build
-.PHONY : c_test/fast
-
-#=============================================================================
-# Target rules for targets named env_posix_test
-
-# Build rule for target.
-env_posix_test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 env_posix_test
-.PHONY : env_posix_test
-
-# fast build rule for target.
-env_posix_test/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/env_posix_test.dir/build.make leveldb/CMakeFiles/env_posix_test.dir/build
-.PHONY : env_posix_test/fast
-
-#=============================================================================
-# Target rules for targets named db_bench
-
-# Build rule for target.
-db_bench: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 db_bench
-.PHONY : db_bench
-
-# fast build rule for target.
-db_bench/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/CMakeFiles/db_bench.dir/build.make leveldb/CMakeFiles/db_bench.dir/build
-.PHONY : db_bench/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/googletest/googlemock/CMakeFiles/gmock.dir/build.make leveldb/third_party/googletest/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make leveldb/third_party/googletest/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/googletest/googletest/CMakeFiles/gtest.dir/build.make leveldb/third_party/googletest/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/googletest/googletest/CMakeFiles/gtest_main.dir/build.make leveldb/third_party/googletest/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-#=============================================================================
-# Target rules for targets named benchmark
-
-# Build rule for target.
-benchmark: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark
-.PHONY : benchmark
-
-# fast build rule for target.
-benchmark/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/benchmark/src/CMakeFiles/benchmark.dir/build.make leveldb/third_party/benchmark/src/CMakeFiles/benchmark.dir/build
-.PHONY : benchmark/fast
-
-#=============================================================================
-# Target rules for targets named benchmark_main
-
-# Build rule for target.
-benchmark_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 benchmark_main
-.PHONY : benchmark_main
-
-# fast build rule for target.
-benchmark_main/fast:
-	$(MAKE) $(MAKESILENT) -f leveldb/third_party/benchmark/src/CMakeFiles/benchmark_main.dir/build.make leveldb/third_party/benchmark/src/CMakeFiles/benchmark_main.dir/build
-.PHONY : benchmark_main/fast
 
 ArrowInputStream/ArrowInputStream.o: ArrowInputStream/ArrowInputStream.cpp.o
 .PHONY : ArrowInputStream/ArrowInputStream.o
@@ -494,6 +293,30 @@ translate/translate.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/S3C++.dir/build.make CMakeFiles/S3C++.dir/translate/translate.cpp.s
 .PHONY : translate/translate.cpp.s
 
+update/update.o: update/update.cpp.o
+.PHONY : update/update.o
+
+# target to build an object file
+update/update.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/S3C++.dir/build.make CMakeFiles/S3C++.dir/update/update.cpp.o
+.PHONY : update/update.cpp.o
+
+update/update.i: update/update.cpp.i
+.PHONY : update/update.i
+
+# target to preprocess a source file
+update/update.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/S3C++.dir/build.make CMakeFiles/S3C++.dir/update/update.cpp.i
+.PHONY : update/update.cpp.i
+
+update/update.s: update/update.cpp.s
+.PHONY : update/update.s
+
+# target to generate assembly for a file
+update/update.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/S3C++.dir/build.make CMakeFiles/S3C++.dir/update/update.cpp.s
+.PHONY : update/update.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -501,26 +324,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... S3C++"
-	@echo "... benchmark"
-	@echo "... benchmark_main"
-	@echo "... c_test"
-	@echo "... db_bench"
-	@echo "... env_posix_test"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
-	@echo "... leveldb"
-	@echo "... leveldb_tests"
-	@echo "... leveldbutil"
 	@echo "... ArrowInputStream/ArrowInputStream.o"
 	@echo "... ArrowInputStream/ArrowInputStream.i"
 	@echo "... ArrowInputStream/ArrowInputStream.s"
@@ -539,6 +346,9 @@ help:
 	@echo "... translate/translate.o"
 	@echo "... translate/translate.i"
 	@echo "... translate/translate.s"
+	@echo "... update/update.o"
+	@echo "... update/update.i"
+	@echo "... update/update.s"
 .PHONY : help
 
 

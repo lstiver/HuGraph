@@ -169,3 +169,173 @@ shared_ptr<arrow::Table> filter(shared_ptr<arrow::Table> table,
     // std::cout << "result schema: " << response_table->schema()->ToString() << std::endl;
     return response_table;
 }
+
+// shared_ptr<arrow::Table> filterOr(shared_ptr<arrow::Table> table, 
+//                                   const string& column_name,
+//                                   const std::vector<int32_t>& values)
+// {
+//     spdlog::info("=== filterOr called ===");
+//     spdlog::info("  Column: {}", column_name);
+//     spdlog::info("  Filter values: {}", fmt::join(values, ", "));
+//     spdlog::info("  Input table rows: {}", table->num_rows());
+    
+//     arrow::dataset::internal::Initialize();
+//     auto dataset = std::make_shared<arrow::dataset::InMemoryDataset>(table);
+//     auto options = std::make_shared<arrow::dataset::ScanOptions>();
+    
+//     if (values.empty()) {
+//         spdlog::error("Values vector is empty");
+//         return table;
+//     }
+    
+//     // 检查列是否存在
+//     auto schema = table->schema();
+//     auto field = schema->GetFieldByName(column_name);
+//     if (!field) {
+//         spdlog::error("Column '{}' not found in schema", column_name);
+//         spdlog::info("Available columns:");
+//         for (int i = 0; i < schema->num_fields(); i++) {
+//             spdlog::info("  - {}", schema->field(i)->name());
+//         }
+//         return nullptr;
+//     }
+//     spdlog::info("Column '{}' found, type: {}", column_name, field->type()->ToString());
+    
+//     // 构建 OR 表达式
+//     spdlog::info("Building OR expression for {} values", values.size());
+//     cp::Expression filter_expr = arrow::compute::literal(false);
+   
+//     filter_expr = arrow::compute::equal(
+//         arrow::compute::field_ref(column_name),
+//         arrow::compute::literal(values[0])
+//     );
+    
+//     for (size_t i = 1; i < values.size(); i++) {
+//         cp::Expression condition = arrow::compute::equal(
+//             arrow::compute::field_ref(column_name),
+//             arrow::compute::literal(values[i])
+//         );
+//         filter_expr = arrow::compute::or_(filter_expr, condition);
+//     }
+    
+//     spdlog::info("Filter expression created");
+//     options->filter = filter_expr;
+//     options->add_augmented_fields = false;
+    
+//     spdlog::info("Creating scan node");
+//     auto scan_node_options = arrow::dataset::ScanNodeOptions{dataset, options};
+//     arrow::acero::Declaration scan{"scan", std::move(scan_node_options)};
+//     spdlog::info("Scan declaration created");
+
+//     spdlog::info("Executing filter...");
+//     arrow::Result<std::shared_ptr<arrow::Table>> status = arrow::acero::DeclarationToTable(std::move(scan));
+    
+//     if (!status.ok()) {
+//         spdlog::error("Error during filter: {}", status.status().ToString());
+//         return nullptr;
+//     }
+    
+//     std::shared_ptr<arrow::Table> response_table = status.ValueOrDie();
+//     spdlog::info("Filter completed: {} -> {} rows", table->num_rows(), response_table->num_rows());
+    
+//     return response_table;
+// }
+shared_ptr<arrow::Table> filterOr(shared_ptr<arrow::Table> table, 
+                                  const string& column_name,
+                                  const std::vector<int32_t>& values)
+{
+    spdlog::info("=== filterOr called ===");
+    spdlog::info("  Column: {}", column_name);
+    spdlog::info("  Filter values: {}", fmt::join(values, ", "));
+    spdlog::info("  Input table rows: {}", table->num_rows());
+    
+    if (values.empty()) {
+        spdlog::error("Values vector is empty");
+        return table;
+    }
+    
+    // 检查列是否存在
+    auto schema = table->schema();
+    auto field = schema->GetFieldByName(column_name);
+    if (!field) {
+        spdlog::error("Column '{}' not found in schema", column_name);
+        return nullptr;
+    }
+    
+    // 获取列数据
+    auto column_chunked = table->GetColumnByName(column_name);
+    if (!column_chunked) {
+        spdlog::error("Failed to get column '{}'", column_name);
+        return nullptr;
+    }
+    
+    // 构建布尔掩码
+    std::shared_ptr<arrow::ChunkedArray> mask;
+    
+    for (size_t i = 0; i < values.size(); i++) {
+        // 为当前值创建相等比较
+        auto eq_result = arrow::compute::CallFunction("equal", {
+            arrow::Datum(column_chunked), 
+            arrow::Datum(values[i])
+        });
+        
+        if (!eq_result.ok()) {
+            spdlog::error("Equal failed for value {}: {}", 
+                         values[i], eq_result.status().ToString());
+            return nullptr;
+        }
+        
+        if (i == 0) {
+            mask = eq_result.ValueOrDie().chunked_array();
+        } else {
+            // OR 操作
+            auto or_result = arrow::compute::CallFunction("or", {
+                arrow::Datum(mask), 
+                eq_result.ValueOrDie()
+            });
+            
+            if (!or_result.ok()) {
+                spdlog::error("OR failed for value {}: {}", 
+                             values[i], or_result.status().ToString());
+                return nullptr;
+            }
+            mask = or_result.ValueOrDie().chunked_array();
+        }
+    }
+    
+    // 应用过滤
+    auto filter_result = arrow::compute::Filter(
+        arrow::Datum(table), 
+        arrow::Datum(mask)
+    );
+    
+    if (!filter_result.ok()) {
+        spdlog::error("Filter failed: {}", filter_result.status().ToString());
+        return nullptr;
+    }
+    
+    auto result_datum = filter_result.ValueOrDie();
+    std::shared_ptr<arrow::Table> filtered_table;
+    
+    // 处理返回结果
+    if (result_datum.table()) {
+        filtered_table = result_datum.table();
+    } else if (result_datum.record_batch()) {
+        auto batch = result_datum.record_batch();
+        auto table_result = arrow::Table::FromRecordBatches(batch->schema(), {batch});
+        if (!table_result.ok()) {
+            spdlog::error("Failed to convert batch to table: {}", 
+                         table_result.status().ToString());
+            return nullptr;
+        }
+        filtered_table = table_result.ValueOrDie();
+    } else {
+        spdlog::error("Filter returned unexpected Datum type");
+        return nullptr;
+    }
+    
+    spdlog::info("Filter completed: {} -> {} rows", 
+                 table->num_rows(), filtered_table->num_rows());
+    
+    return filtered_table;
+}

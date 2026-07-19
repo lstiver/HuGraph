@@ -76,6 +76,12 @@ shared_ptr<arrow::Table> getObject(
     shared_ptr<Aws::S3::S3Client> awsClient,
     const vector<string> & col,
     size_t length);
+
+shared_ptr<arrow::Table> getObject(
+    const string &bucket, 
+    const string &key, 
+    shared_ptr<Aws::S3::S3Client> awsClient,
+    const vector<string> &col);
     
 shared_ptr<arrow::Table> getObjectbyIndex(
     const string &bucket, 

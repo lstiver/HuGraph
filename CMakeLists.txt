@@ -15,8 +15,10 @@ message(STATUS "C++ Standard: ${CMAKE_CXX_STANDARD}")
 #-----------------------------
 # 依赖查找
 #-----------------------------
-# LevelDB (通过 add_subdirectory 引入)
-add_subdirectory(leveldb)
+# LevelDB (直接链接已编译的库)
+# add_subdirectory(leveldb)  # 注释掉以避免权限问题
+set(LEVELDB_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/leveldb/include)
+set(LEVELDB_LIBRARY ${PROJECT_SOURCE_DIR}/leveldb/libleveldb.a)
 
 # Arrow 相关
 find_package(Arrow REQUIRED)
@@ -40,6 +42,7 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/algorithm
     ${PROJECT_SOURCE_DIR}/leveldb
     ${PROJECT_SOURCE_DIR}/ArrowInputStream
+    ${PROJECT_SOURCE_DIR}/update
     ${Python3_INCLUDE_DIRS}
     /usr/local/include/aws
 )
@@ -54,6 +57,7 @@ add_executable(${PROJECT_NAME}
     queryMethod/query.cpp
     algorithm/merge.cpp
     ArrowInputStream/ArrowInputStream.cpp
+    update/update.cpp
 )
 
 #-----------------------------
@@ -61,10 +65,11 @@ add_executable(${PROJECT_NAME}
 #-----------------------------
 target_link_libraries(${PROJECT_NAME} PUBLIC
     # 基础库
-    leveldb
+    ${LEVELDB_LIBRARY}
     pthread
     m
     dl
+    snappy
 
     # Arrow 相关
     Arrow::arrow_shared

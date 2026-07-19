@@ -7,13 +7,13 @@ using namespace std;
 
 int main() {
     // 打开 CSV 文件
-    std::ifstream file("/data/conversion_index.csv");
+    std::ifstream file("/home/ec2-user/s3/s3DemoService/predicate.csv");
     if (!file.is_open()) {
         std::cerr << "无法打开文件!" << std::endl;
         return -1;
     }
 
-    string dbPath = "/home/ec2-user/s3/S3C++/index";
+    string dbPath = "/home/ec2-user/s3/index/";
 
     // 打开levedb
     leveldb::DB* db;
@@ -33,8 +33,12 @@ int main() {
         std::string value, key;
 
         // 将CSV分成两列
-        std::getline(ss, key, ',');  // 第一列：int，存储为值
-        std::getline(ss, value, ',');        // 第二列：string，存储为键
+        // std::getline(ss, key, ',');  // 第一列：int，存储为值
+        // std::getline(ss, value, ',');        // 第二列：string，存储为键
+         std::getline(ss, value, ',');  // 第一列：int，存储为值
+        std::getline(ss, key, ',');        // 第二列：string，存储为键
+        //  std::getline(ss, value, '\t');  // 第一列：int，存储为值
+        // std::getline(ss, key, '\t');        // 第二列：string，存储为键
 
         // 去除 key 和 value 的前后空白字符
         key.erase(0, key.find_first_not_of(" \t\n\r"));
@@ -44,7 +48,6 @@ int main() {
 
         // 将键值对写入 LevelDB
         status = db->Put(leveldb::WriteOptions(), key, value);
-
         if (!status.ok()) {
             std::cerr << "无法写入数据到 LevelDB: " << status.ToString() << std::endl;
             file.close();

@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/fpdb-util-test.dir/test/MainTest.cpp.o CMakeFiles/fpdb-util-test.dir/test/TraitsTest.cpp.o CMakeFiles/fpdb-util-test.dir/test/UtilTest.cpp.o -o fpdb-util-test  libfpdb-util.a /usr/local/lib64/libfmt.a /usr/local/lib64/libspdlog.a 

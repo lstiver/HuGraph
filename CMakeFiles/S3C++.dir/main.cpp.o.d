@@ -154,15 +154,12 @@ CMakeFiles/S3C++.dir/main.cpp.o: /home/ec2-user/s3/S3C++/main.cpp \
  /usr/include/c++/11/bits/unordered_map.h \
  /usr/include/c++/11/pstl/execution_defs.h /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/db.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/export.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/iterator.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/slice.h \
+ /usr/local/include/leveldb/db.h /usr/local/include/leveldb/export.h \
+ /usr/local/include/leveldb/iterator.h /usr/local/include/leveldb/slice.h \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/cstring \
  /usr/include/string.h /usr/include/strings.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/status.h \
- /home/ec2-user/s3/S3C++/leveldb/include/leveldb/options.h \
+ /usr/local/include/leveldb/status.h /usr/local/include/leveldb/options.h \
  /home/ec2-user/s3/S3C++/translate/translate.h /usr/include/c++/11/regex \
  /usr/include/c++/11/bitset /usr/include/c++/11/locale \
  /usr/include/c++/11/bits/locale_facets_nonio.h /usr/include/c++/11/ctime \
@@ -801,33 +798,8 @@ CMakeFiles/S3C++.dir/main.cpp.o: /home/ec2-user/s3/S3C++/main.cpp \
  /usr/include/arrow/ipc/writer.h /usr/include/arrow/ipc/dictionary.h \
  /usr/include/arrow/ipc/message.h /usr/include/arrow/ipc/options.h \
  /usr/include/arrow/io/caching.h /usr/include/arrow/util/compression.h \
- /home/ec2-user/s3/S3C++/sort/sort.h \
- /home/ec2-user/s3/S3C++/algorithm/merge.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap_fwd_decl.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap_utils.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap_bits.h \
- /usr/include/byteswap.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap_config.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/emmintrin.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/xmmintrin.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/mmintrin.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/mm_malloc.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/tmmintrin.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/pmmintrin.h \
- /usr/lib/gcc/x86_64-amazon-linux/11/include/mwaitintrin.h \
- /home/ec2-user/s3/S3C++/parallel-hashmap/parallel_hashmap/phmap_base.h \
- /usr/include/c++/11/shared_mutex /usr/include/arrow/acero/exec_plan.h \
- /usr/include/arrow/acero/type_fwd.h \
- /usr/include/arrow/compute/type_fwd.h \
- /usr/include/arrow/acero/visibility.h \
- /usr/include/arrow/compute/api_vector.h \
- /usr/include/arrow/compute/function_options.h \
- /usr/include/arrow/compute/ordering.h /usr/include/arrow/compute/exec.h \
- /usr/include/arrow/compute/expression.h \
- /usr/include/arrow/util/small_vector.h \
- /usr/include/arrow/acero/options.h \
- /usr/include/arrow/compute/api_aggregate.h \
+ /usr/include/arrow/ipc/api.h /usr/include/arrow/ipc/feather.h \
+ /usr/include/arrow/ipc/json_simple.h /usr/include/arrow/ipc/reader.h \
  /usr/include/arrow/util/async_generator.h \
  /usr/include/arrow/util/async_generator_fwd.h \
  /usr/include/arrow/util/async_util.h /usr/include/arrow/util/mutex.h \
@@ -846,22 +818,25 @@ CMakeFiles/S3C++.dir/main.cpp.o: /home/ec2-user/s3/S3C++/main.cpp \
  /usr/include/bits/signal_ext.h /usr/include/arrow/util/windows_fixup.h \
  /usr/include/arrow/util/queue.h \
  /usr/include/arrow/vendored/ProducerConsumerQueue.h \
- /usr/include/arrow/compute/api.h /usr/include/arrow/compute/api_scalar.h \
- /usr/include/arrow/compute/cast.h /usr/include/arrow/compute/function.h \
- /usr/include/arrow/compute/kernel.h \
- /usr/include/arrow/compute/registry.h \
- /usr/include/arrow/compute/row/grouper.h /usr/include/arrow/ipc/api.h \
- /usr/include/arrow/ipc/feather.h /usr/include/arrow/ipc/json_simple.h \
- /usr/include/arrow/ipc/reader.h /usr/include/arrow/util/range.h \
- /usr/include/arrow/util/vector.h /usr/include/arrow/util/algorithm.h \
- /usr/include/arrow/util/logging.h /usr/include/arrow/dataset/dataset.h \
+ /usr/include/arrow/util/range.h /usr/include/arrow/util/vector.h \
+ /usr/include/arrow/util/algorithm.h /usr/include/arrow/util/logging.h \
+ /usr/include/arrow/dataset/dataset.h \
+ /usr/include/arrow/compute/expression.h \
+ /usr/include/arrow/compute/type_fwd.h \
+ /usr/include/arrow/util/small_vector.h \
  /usr/include/arrow/dataset/type_fwd.h \
  /usr/include/arrow/dataset/visibility.h \
  /usr/include/arrow/filesystem/type_fwd.h \
  /usr/include/arrow/dataset/api.h /usr/include/arrow/dataset/discovery.h \
  /usr/include/arrow/dataset/partition.h \
  /usr/include/arrow/dataset/file_base.h \
- /usr/include/arrow/dataset/scanner.h \
+ /usr/include/arrow/dataset/scanner.h /usr/include/arrow/acero/options.h \
+ /usr/include/arrow/acero/type_fwd.h \
+ /usr/include/arrow/acero/visibility.h \
+ /usr/include/arrow/compute/api_aggregate.h \
+ /usr/include/arrow/compute/function_options.h \
+ /usr/include/arrow/compute/api_vector.h \
+ /usr/include/arrow/compute/ordering.h /usr/include/arrow/compute/exec.h \
  /usr/include/arrow/dataset/projector.h \
  /usr/include/arrow/filesystem/filesystem.h \
  /usr/include/arrow/dataset/file_csv.h \
@@ -869,5 +844,14 @@ CMakeFiles/S3C++.dir/main.cpp.o: /home/ec2-user/s3/S3C++/main.cpp \
  /usr/include/arrow/json/type_fwd.h /usr/include/arrow/dataset/file_ipc.h \
  /usr/include/arrow/dataset/file_orc.h \
  /usr/include/arrow/dataset/file_parquet.h \
- /usr/include/arrow/dataset/plan.h \
- /home/ec2-user/s3/S3C++/algorithm/order.h
+ /usr/include/arrow/dataset/plan.h /usr/include/arrow/acero/exec_plan.h \
+ /usr/include/arrow/compute/api.h /usr/include/arrow/compute/api_scalar.h \
+ /usr/include/arrow/compute/cast.h /usr/include/arrow/compute/function.h \
+ /usr/include/arrow/compute/kernel.h \
+ /usr/include/arrow/compute/registry.h \
+ /usr/include/arrow/compute/row/grouper.h \
+ /home/ec2-user/s3/S3C++/sort/sort.h \
+ /home/ec2-user/s3/S3C++/algorithm/merge.h \
+ /home/ec2-user/s3/S3C++/algorithm/order.h \
+ /home/ec2-user/s3/S3C++/update/update.h \
+ /usr/local/include/aws/s3/model/DeleteObjectRequest.h

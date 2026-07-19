@@ -51,4 +51,7 @@ shared_ptr<arrow::Table> merge(shared_ptr<arrow::Table> dataA,
 shared_ptr<arrow::Table> filter(shared_ptr<arrow::Table> table, 
                                 string col1,
                                 string col2);
+shared_ptr<arrow::Table> filterOr(shared_ptr<arrow::Table> table, 
+                                  const string& column_name,
+                                  const std::vector<int32_t>& values);
 #endif

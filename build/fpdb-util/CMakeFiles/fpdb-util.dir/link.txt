@@ -1,2 +1,0 @@
-/usr/bin/ar qc libfpdb-util.a CMakeFiles/fpdb-util.dir/src/Util.cpp.o CMakeFiles/fpdb-util.dir/src/CPUMonitor.cpp.o
-/usr/bin/ranlib libfpdb-util.a

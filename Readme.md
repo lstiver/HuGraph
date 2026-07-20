@@ -131,4 +131,4 @@ We welcome Issue submissions and Pull Requests to improve the project.
 
 ## Technical Report
 This repository includes a comprehensive technical report that documents the complete principles, experimental methodology, and performance evaluation.
-**[View Technical Report](https://github.com/lstiver/HuGraph/blob/main/Cloud_Native_RDF_Store%20.pdf)**
+**[View Technical Report](https://github.com/lstiver/HuGraph/blob/main/Cloud_Native_RDF_Store.pdf)**

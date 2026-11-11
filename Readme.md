@@ -1,6 +1,12 @@
 # HuGraph: An Economical Cloud-Native RDF Store
 
-## Overview
+
+## Technical Report
+This repository includes a comprehensive technical report that documents the complete principles, experimental methodology, and performance evaluation.
+**[View Technical Report](https://github.com/lstiver/HuGraph/blob/main/Cloud_Native_RDF_Store.pdf)**
+
+
+## Research Overview
 
 HuGraph is a cloud-native RDF storage and query system built on C++17, integrating LevelDB, Apache Arrow, and Alibaba Cloud OSS SDK. It aims to minimize economic costs while meeting time constraints and providing acceptable query performance. Currently, two versions are available: the Amazon-based version is on the `main` branch, and the Aliyun-based version is on the `aliyun` branch.
 
@@ -128,7 +134,3 @@ make
 ## Contributing
 
 We welcome Issue submissions and Pull Requests to improve the project.
-
-## Technical Report
-This repository includes a comprehensive technical report that documents the complete principles, experimental methodology, and performance evaluation.
-**[View Technical Report](https://github.com/lstiver/HuGraph/blob/main/Cloud_Native_RDF_Store.pdf)**
